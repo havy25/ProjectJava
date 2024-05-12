@@ -23,11 +23,11 @@ public class Main extends javax.swing.JFrame {
         init();
     }
     public void init(){
-        ComponentResizer com=new ComponentResizer();
-        com.registerComponent(this);
-        com.setMinimumSize(new Dimension(800, 500));
-        com.setMaximumSize(Toolkit.getDefaultToolkit().getScreenSize());
-        com.setSnapSize(new Dimension(10,10));
+        ComponentResizer com=new ComponentResizer(); //: Tạo một đối tượng mới của lớp ComponentResizer. Đây là một lớp được sử dụng để điều chỉnh kích thước của các thành phần trong giao diện người dùng.
+        com.registerComponent(this);// Đăng ký thành phần hiện tại (được tham chiếu bởi this) để có thể được điều chỉnh kích thước bởi ComponentResizer.
+        com.setMinimumSize(new Dimension(800, 500));//Thiết lập kích thước tối thiểu mà thành phần có thể được co giãn đến. Trong trường hợp này, kích thước tối thiểu được đặt là 800x500 pixels.
+        com.setMaximumSize(Toolkit.getDefaultToolkit().getScreenSize());//Thiết lập kích thước tối đa mà thành phần có thể được co giãn đến. Kích thước tối đa được đặt là kích thước của màn hình hiện tại sử dụng Toolkit.getDefaultToolkit().getScreenSize()
+        com.setSnapSize(new Dimension(10,10));// Thiết lập kích thước của bước nhảy khi co giãn hoặc kéo các cạnh của thành phần. Trong trường hợp này, bước nhảy được đặt là 10 pixels theo cả chiều rộng và chiều cao.
         
         
     }
@@ -121,7 +121,7 @@ public class Main extends javax.swing.JFrame {
             .addGroup(backgroundLayout.createSequentialGroup()
                 .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(body, javax.swing.GroupLayout.DEFAULT_SIZE, 441, Short.MAX_VALUE))
+                .addComponent(body, javax.swing.GroupLayout.DEFAULT_SIZE, 506, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout borderLayout = new javax.swing.GroupLayout(border);
@@ -163,8 +163,9 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_titleMouseDragged
 
     private void titleMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_titleMousePressed
-        pX = evt.getX();
-        pY = evt.getY();
+       //Hàm titleMousePressed được sử dụng để xử lý sự kiện khi người dùng nhấn chuột vào một thành phần (chẳng hạn như một tiêu đề của cửa sổ hoặc một phần tử giao diện khác) và giữ chuột xuống.
+        pX = evt.getX();// Lấy tọa độ x của con trỏ chuột tại thời điểm mà sự kiện chuột được kích hoạt. Biến evt là đối tượng chứa thông tin về sự kiện chuột, và getX() trả về tọa độ x của chuột tại điểm sự kiện xảy ra.
+        pY = evt.getY();//lấy tọa độ y của con trỏ chuột tại thời điểm sự kiện chuột được kích hoạt.
     }//GEN-LAST:event_titleMousePressed
 
     private void cmdCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdCloseActionPerformed
