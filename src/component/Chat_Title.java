@@ -4,6 +4,8 @@
  */
 package component;
 
+import java.awt.Color;
+
 /**
  *
  * @author Lenovo
@@ -17,6 +19,19 @@ public class Chat_Title extends javax.swing.JPanel {
         initComponents();
     }
 
+    public void setUserName(String userName) {
+        lbName.setText(userName);
+    }
+
+    public void statusActive() {
+        lbStatus.setText("Active now");
+        lbStatus.setForeground(new java.awt.Color(40, 147, 59));
+    }
+
+    public void setStatusText(String text) {
+        lbStatus.setText(text);
+        lbStatus.setForeground(new Color(160, 160, 160));
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -26,21 +41,43 @@ public class Chat_Title extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        layer = new javax.swing.JLayeredPane();
+        lbStatus = new javax.swing.JLabel();
+        lbName = new javax.swing.JLabel();
+
         setPreferredSize(new java.awt.Dimension(400, 40));
+
+        layer.setLayout(new java.awt.GridLayout(0, 1));
+
+        lbStatus.setBackground(new java.awt.Color(214, 217, 223));
+        lbStatus.setForeground(new java.awt.Color(35, 164, 59));
+        lbStatus.setText("Active now");
+        layer.add(lbStatus);
+
+        lbName.setBackground(new java.awt.Color(214, 217, 223));
+        lbName.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lbName.setText("Name");
+        layer.add(lbName);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(layer, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(333, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 40, Short.MAX_VALUE)
+            .addComponent(layer)
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLayeredPane layer;
+    private javax.swing.JLabel lbName;
+    private javax.swing.JLabel lbStatus;
     // End of variables declaration//GEN-END:variables
 }
