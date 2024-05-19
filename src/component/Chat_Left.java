@@ -5,6 +5,7 @@
 package component;
 
 import java.awt.Color;
+import javax.swing.Icon;
 
 /**
  *
@@ -20,8 +21,20 @@ public class Chat_Left extends javax.swing.JLayeredPane {
         txt.setBackground(new Color(242, 242, 242));
     }
     public void setText(String text) {
-        txt.setText(text);
+        if (text.equals("")) {
+            txt.hideText();
+        } else {
+            txt.setText(text);
+        }
+
     }
+    public void setImage(Icon... image) {
+        txt.setImage(false, image);
+    }
+    public void setTime() {
+        txt.setTime("10:30 PM");    
+    }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
