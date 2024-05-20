@@ -3,11 +3,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package main;
-
+import event.EventImageView;
+import event.PublicEvent;
+import swing.ComponentResizer;
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
-import swing.ComponentResizer;
 
 /**
  *
@@ -22,14 +25,40 @@ public class Main extends javax.swing.JFrame {
         initComponents();
         init();
     }
-    public void init(){
-        ComponentResizer com=new ComponentResizer(); //: Tạo một đối tượng mới của lớp ComponentResizer. Đây là một lớp được sử dụng để điều chỉnh kích thước của các thành phần trong giao diện người dùng.
-        com.registerComponent(this);// Đăng ký thành phần hiện tại (được tham chiếu bởi this) để có thể được điều chỉnh kích thước bởi ComponentResizer.
-        com.setMinimumSize(new Dimension(800, 500));//Thiết lập kích thước tối thiểu mà thành phần có thể được co giãn đến. Trong trường hợp này, kích thước tối thiểu được đặt là 800x500 pixels.
-        com.setMaximumSize(Toolkit.getDefaultToolkit().getScreenSize());//Thiết lập kích thước tối đa mà thành phần có thể được co giãn đến. Kích thước tối đa được đặt là kích thước của màn hình hiện tại sử dụng Toolkit.getDefaultToolkit().getScreenSize()
-        com.setSnapSize(new Dimension(10,10));// Thiết lập kích thước của bước nhảy khi co giãn hoặc kéo các cạnh của thành phần. Trong trường hợp này, bước nhảy được đặt là 10 pixels theo cả chiều rộng và chiều cao.
-        
-        
+//    public void init(){
+//        ComponentResizer com=new ComponentResizer(); //: Tạo một đối tượng mới của lớp ComponentResizer. Đây là một lớp được sử dụng để điều chỉnh kích thước của các thành phần trong giao diện người dùng.
+//        com.registerComponent(this);// Đăng ký thành phần hiện tại (được tham chiếu bởi this) để có thể được điều chỉnh kích thước bởi ComponentResizer.
+//        com.setMinimumSize(new Dimension(800, 500));//Thiết lập kích thước tối thiểu mà thành phần có thể được co giãn đến. Trong trường hợp này, kích thước tối thiểu được đặt là 800x500 pixels.
+//        com.setMaximumSize(Toolkit.getDefaultToolkit().getScreenSize());//Thiết lập kích thước tối đa mà thành phần có thể được co giãn đến. Kích thước tối đa được đặt là kích thước của màn hình hiện tại sử dụng Toolkit.getDefaultToolkit().getScreenSize()
+//        com.setSnapSize(new Dimension(10,10));// Thiết lập kích thước của bước nhảy khi co giãn hoặc kéo các cạnh của thành phần. Trong trường hợp này, bước nhảy được đặt là 10 pixels theo cả chiều rộng và chiều cao.
+//        
+//        
+//    }
+        private void init() {
+        setIconImage(new ImageIcon(getClass().getResource("/icon/icon.png")).getImage());
+        ComponentResizer com = new ComponentResizer();
+        com.registerComponent(this);
+        com.setMinimumSize(new Dimension(800, 500));
+        com.setMaximumSize(Toolkit.getDefaultToolkit().getScreenSize());
+        com.setSnapSize(new Dimension(10, 10));
+        vIew_Image.setVisible(false);
+        home.setVisible(true);
+        initEvent();
+    }
+
+    private void initEvent() {
+        PublicEvent.getInstance().addEventImageView(new EventImageView() {
+            @Override
+            public void viewImage(Icon image) {
+                vIew_Image.viewImage(image);
+            }
+
+            @Override
+            public void saveImage(Icon image) {
+                System.out.println("Save Image next update");
+            }
+
+        });
     }
 
     /**
@@ -47,7 +76,8 @@ public class Main extends javax.swing.JFrame {
         cmdMinimize = new javax.swing.JButton();
         cmdClose = new javax.swing.JButton();
         body = new javax.swing.JLayeredPane();
-        home1 = new form.Home();
+        home = new form.Home();
+        vIew_Image = new form.VIew_Image();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -106,22 +136,35 @@ public class Main extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        body.setLayout(new java.awt.BorderLayout());
-        body.add(home1, java.awt.BorderLayout.CENTER);
+        body.setLayout(new java.awt.CardLayout());
+        body.add(home, "card2");
+
+        javax.swing.GroupLayout vIew_ImageLayout = new javax.swing.GroupLayout(vIew_Image);
+        vIew_Image.setLayout(vIew_ImageLayout);
+        vIew_ImageLayout.setHorizontalGroup(
+            vIew_ImageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1442, Short.MAX_VALUE)
+        );
+        vIew_ImageLayout.setVerticalGroup(
+            vIew_ImageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 585, Short.MAX_VALUE)
+        );
+
+        body.add(vIew_Image, "card3");
 
         javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);
         background.setLayout(backgroundLayout);
         backgroundLayout.setHorizontalGroup(
             backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(body, javax.swing.GroupLayout.DEFAULT_SIZE, 970, Short.MAX_VALUE)
+            .addComponent(body, javax.swing.GroupLayout.DEFAULT_SIZE, 1442, Short.MAX_VALUE)
         );
         backgroundLayout.setVerticalGroup(
             backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(backgroundLayout.createSequentialGroup()
                 .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(body, javax.swing.GroupLayout.DEFAULT_SIZE, 506, Short.MAX_VALUE))
+                .addComponent(body, javax.swing.GroupLayout.DEFAULT_SIZE, 585, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout borderLayout = new javax.swing.GroupLayout(border);
@@ -217,7 +260,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel border;
     private javax.swing.JButton cmdClose;
     private javax.swing.JButton cmdMinimize;
-    private form.Home home1;
+    private form.Home home;
     private javax.swing.JPanel title;
+    private form.VIew_Image vIew_Image;
     // End of variables declaration//GEN-END:variables
 }
