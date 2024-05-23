@@ -1,3 +1,4 @@
+
 package form;
 
 import event.PublicEvent;
@@ -12,9 +13,7 @@ public class VIew_Image extends javax.swing.JComponent {
     public VIew_Image() {
         initComponents();
     }
-
     private Icon image;
-
     public void viewImage(Icon image) {
         this.image = image;
         pic.setImage(image);
@@ -26,20 +25,34 @@ public class VIew_Image extends javax.swing.JComponent {
     private void initComponents() {
 
         pic = new swing.PictureBox();
+        jButton1 = new javax.swing.JButton();
+
+        pic.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                picMousePressed(evt);
+            }
+        });
+
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/save.png"))); // NOI18N
+        jButton1.setContentAreaFilled(false);
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        pic.add(jButton1);
+        jButton1.setBounds(0, 460, 54, 40);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(pic, javax.swing.GroupLayout.DEFAULT_SIZE, 809, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(pic, javax.swing.GroupLayout.DEFAULT_SIZE, 1124, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(pic, javax.swing.GroupLayout.DEFAULT_SIZE, 473, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(pic, javax.swing.GroupLayout.DEFAULT_SIZE, 504, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -49,6 +62,10 @@ public class VIew_Image extends javax.swing.JComponent {
         }
     }//GEN-LAST:event_picMousePressed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        PublicEvent.getInstance().getEventImageView().saveImage(image);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     @Override
     protected void paintComponent(Graphics grphcs) {
         Graphics2D g2 = (Graphics2D) grphcs;
@@ -56,9 +73,8 @@ public class VIew_Image extends javax.swing.JComponent {
         g2.fillRect(0, 0, getWidth(), getHeight());
         super.paintComponent(grphcs);
     }
-
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private swing.PictureBox pic;
     // End of variables declaration//GEN-END:variables
 }

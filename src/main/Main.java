@@ -76,8 +76,8 @@ public class Main extends javax.swing.JFrame {
         cmdMinimize = new javax.swing.JButton();
         cmdClose = new javax.swing.JButton();
         body = new javax.swing.JLayeredPane();
-        home = new form.Home();
         vIew_Image = new form.VIew_Image();
+        home = new form.Home();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -100,6 +100,7 @@ public class Main extends javax.swing.JFrame {
         cmdMinimize.setBackground(new java.awt.Color(204, 204, 204));
         cmdMinimize.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/minimize.png"))); // NOI18N
         cmdMinimize.setBorder(null);
+        cmdMinimize.setContentAreaFilled(false);
         cmdMinimize.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdMinimizeActionPerformed(evt);
@@ -109,6 +110,7 @@ public class Main extends javax.swing.JFrame {
         cmdClose.setBackground(new java.awt.Color(204, 204, 204));
         cmdClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/close.png"))); // NOI18N
         cmdClose.setBorder(null);
+        cmdClose.setContentAreaFilled(false);
         cmdClose.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         cmdClose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,20 +139,9 @@ public class Main extends javax.swing.JFrame {
         );
 
         body.setLayout(new java.awt.CardLayout());
-        body.add(home, "card2");
-
-        javax.swing.GroupLayout vIew_ImageLayout = new javax.swing.GroupLayout(vIew_Image);
-        vIew_Image.setLayout(vIew_ImageLayout);
-        vIew_ImageLayout.setHorizontalGroup(
-            vIew_ImageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1442, Short.MAX_VALUE)
-        );
-        vIew_ImageLayout.setVerticalGroup(
-            vIew_ImageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 585, Short.MAX_VALUE)
-        );
-
+        body.setLayer(vIew_Image, javax.swing.JLayeredPane.POPUP_LAYER);
         body.add(vIew_Image, "card3");
+        body.add(home, "card2");
 
         javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);
         background.setLayout(backgroundLayout);
@@ -164,7 +155,7 @@ public class Main extends javax.swing.JFrame {
             .addGroup(backgroundLayout.createSequentialGroup()
                 .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(body, javax.swing.GroupLayout.DEFAULT_SIZE, 585, Short.MAX_VALUE))
+                .addComponent(body, javax.swing.GroupLayout.DEFAULT_SIZE, 506, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout borderLayout = new javax.swing.GroupLayout(border);
