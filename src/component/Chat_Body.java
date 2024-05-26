@@ -13,11 +13,12 @@ public class Chat_Body extends javax.swing.JPanel {
         init();
         addItemRight("Send a text message to a group of contacts. Include photos, personalize your texts, and track who clicked your links.", new ImageIcon(getClass().getResource("/icon/testing/cat.png")), new ImageIcon(getClass().getResource("/icon/testing/pic.jpg")));
         addItemRight("hello\nHi");
-      //  addItemLeft("Simpletext started as a passion project because I couldn’t find what I was looking for. Most apps were trying to do too much and ended up bloated with features I don’t need. So I built Simpletext based on a simple premise — what if there’s an app that refuses to do more, choosing instead to do just one thing, and do it well? For Simpletext, that one thing is writing.", "Raven", new ImageIcon(getClass().getResource("/icon/testing/dog.jpg")), new ImageIcon(getClass().getResource("/icon/testing/pic.jpg")));
+        addItemLeft("Simpletext started as a passion project because I couldn’t find what I was looking for. Most apps were trying to do too much and ended up bloated with features I don’t need. So I built Simpletext based on a simple premise — what if there’s an app that refuses to do more, choosing instead to do just one thing, and do it well? For Simpletext, that one thing is writing.", "Raven", new ImageIcon(getClass().getResource("/icon/testing/dog.jpg")), new ImageIcon(getClass().getResource("/icon/testing/pic.jpg")));
         addDate("05/06/2021");
+        String img[] = {"LKIY5[$z4;T0~qoztRWB4.kC%1n$", "LKIY5[$z4;T0~qoztRWB4.kC%1n$"};
         addItemLeft("hello\nerererew\newewe", "Dara");
         addItemRight("hello\nerererew\newewe", new ImageIcon(getClass().getResource("/icon/testing/pic.jpg")));
-    //    addItemLeft("Hello this is my friend", "Jonh", new ImageIcon(getClass().getResource("/icon/testing/dog.jpg")), new ImageIcon(getClass().getResource("/icon/testing/dog.jpg")));
+      addItemLeft("Hello this is my friend", "Jonh", new ImageIcon(getClass().getResource("/icon/testing/pic.jpg")), new ImageIcon(getClass().getResource("/icon/testing/pic1.jpg")));
         addItemRight("Ok\nWhat is he name ?");
         addItemLeft("", "Ro", new ImageIcon(getClass().getResource("/icon/testing/pic.jpg")));
 
@@ -30,6 +31,17 @@ public class Chat_Body extends javax.swing.JPanel {
     }
 
     public void addItemLeft(String text, String user, Icon... image) {
+        Chat_Left_With_Profile item = new Chat_Left_With_Profile();
+        item.setText(text);
+        item.setImage(image);
+        item.setTime();
+        item.setUserProfile(user);
+        body.add(item, "wrap, w 100::80%");
+        //  ::80% set max with 80%
+        body.repaint();
+        body.revalidate();
+    }
+       public void addItemLeft(String text, String user, String[] image) {
         Chat_Left_With_Profile item = new Chat_Left_With_Profile();
         item.setText(text);
         item.setImage(image);
