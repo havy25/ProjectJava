@@ -1,9 +1,13 @@
 package component;
 
+import java.awt.Adjustable;
 import swing.ScrollBar;
 import java.awt.Color;
+import java.awt.event.AdjustmentEvent;
+import java.awt.event.AdjustmentListener;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JScrollBar;
 import net.miginfocom.swing.MigLayout;
 
 public class Chat_Body extends javax.swing.JPanel {
@@ -11,18 +15,18 @@ public class Chat_Body extends javax.swing.JPanel {
     public Chat_Body() {
         initComponents();
         init();
-        addItemRight("Send a text message to a group of contacts. Include photos, personalize your texts, and track who clicked your links.", new ImageIcon(getClass().getResource("/icon/testing/cat.png")), new ImageIcon(getClass().getResource("/icon/testing/pic.jpg")));
-        addItemRight("hello\nHi");
-        addItemLeft("Simpletext started as a passion project because I couldn’t find what I was looking for. Most apps were trying to do too much and ended up bloated with features I don’t need. So I built Simpletext based on a simple premise — what if there’s an app that refuses to do more, choosing instead to do just one thing, and do it well? For Simpletext, that one thing is writing.", "Raven", new ImageIcon(getClass().getResource("/icon/testing/dog.jpg")), new ImageIcon(getClass().getResource("/icon/testing/pic.jpg")));
-        addDate("05/06/2021");
-        String img[] = {"LKIY5[$z4;T0~qoztRWB4.kC%1n$", "LPNJgu01%iwI?^-UxGoMxYM{IVRj"};
-        addItemLeft("hello\nerererew\newewe", "Dara",img);
-        addItemRight("hello\nerererew\newewe", new ImageIcon(getClass().getResource("/icon/testing/pic.jpg")));
-        addItemLeft("Hello this is my friend", "Jonh", new ImageIcon(getClass().getResource("/icon/testing/pic.jpg")), new ImageIcon(getClass().getResource("/icon/testing/pic1.jpg")));
+//        addItemRight("Send a text message to a group of contacts. Include photos, personalize your texts, and track who clicked your links.", new ImageIcon(getClass().getResource("/icon/testing/cat.png")), new ImageIcon(getClass().getResource("/icon/testing/pic.jpg")));
+//        addItemRight("hello\nHi");
+//        addItemLeft("Simpletext started as a passion project because I couldn’t find what I was looking for. Most apps were trying to do too much and ended up bloated with features I don’t need. So I built Simpletext based on a simple premise — what if there’s an app that refuses to do more, choosing instead to do just one thing, and do it well? For Simpletext, that one thing is writing.", "Raven", new ImageIcon(getClass().getResource("/icon/testing/dog.jpg")), new ImageIcon(getClass().getResource("/icon/testing/pic.jpg")));
+//        addDate("05/06/2021");
+//        String img[] = {"LKIY5[$z4;T0~qoztRWB4.kC%1n$", "LPNJgu01%iwI?^-UxGoMxYM{IVRj"};
+//        addItemLeft("hello\nerererew\newewe", "Dara",img);
+//        addItemRight("hello\nerererew\newewe", new ImageIcon(getClass().getResource("/icon/testing/pic.jpg")));
+//        addItemLeft("Hello this is my friend", "Jonh", new ImageIcon(getClass().getResource("/icon/testing/pic.jpg")), new ImageIcon(getClass().getResource("/icon/testing/pic1.jpg")));
         addItemRight("Ok\nWhat is he name ?");
-        addItemLeft("", "Ro", new ImageIcon(getClass().getResource("/icon/testing/pic.jpg")));
-        addItemFile("my file", "Dara", "my doc.pdf", "1 MB");
-        addItemFileRight("", "myfile.rar", "15 MB");
+//        addItemLeft("", "Ro", new ImageIcon(getClass().getResource("/icon/testing/pic.jpg")));
+//        addItemFile("my file", "Dara", "my doc.pdf", "1 MB");
+//        addItemFileRight("", "myfile.rar", "15 MB");
 
     }
 
@@ -129,7 +133,18 @@ public class Chat_Body extends javax.swing.JPanel {
             .addComponent(sp)
         );
     }// </editor-fold>//GEN-END:initComponents
-
+      private void scrollToBottom() {
+        JScrollBar verticalBar = sp.getVerticalScrollBar();
+        AdjustmentListener downScroller = new AdjustmentListener() {
+            @Override
+            public void adjustmentValueChanged(AdjustmentEvent e) {
+                Adjustable adjustable = e.getAdjustable();
+                adjustable.setValue(adjustable.getMaximum());
+                verticalBar.removeAdjustmentListener(this);
+            }
+        };
+        verticalBar.addAdjustmentListener(downScroller);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel body;
