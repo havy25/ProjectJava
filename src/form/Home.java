@@ -1,15 +1,25 @@
-
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ */
 package form;
 
 import net.miginfocom.swing.MigLayout;
 
+/**
+ *
+ * @author Lenovo
+ */
 public class Home extends javax.swing.JLayeredPane {
 
+    /**
+     * Creates new form HomeM
+     */
     public Home() {
         initComponents();
         init();
     }
-    private void init(){
+        private void init(){
         setLayout(new MigLayout("fillx,filly","0[200!]5[fill,100%]5[200!]0","0[fill]0"));
         this.add(new Menu_Left());
         this.add(new Chat());
@@ -17,6 +27,7 @@ public class Home extends javax.swing.JLayeredPane {
         
         
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
