@@ -114,8 +114,6 @@ public class Menu_Left extends javax.swing.JPanel {
 
         menu = new javax.swing.JLayeredPane();
         menuMessage = new component.MenuButton();
-        menuGroup = new component.MenuButton();
-        menuBox = new component.MenuButton();
         sp = new javax.swing.JScrollPane();
         menuList = new javax.swing.JLayeredPane();
 
@@ -132,26 +130,6 @@ public class Menu_Left extends javax.swing.JPanel {
             }
         });
         menu.add(menuMessage);
-
-        menuGroup.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/group.png"))); // NOI18N
-        menuGroup.setIconSelected(new javax.swing.ImageIcon(getClass().getResource("/icon/group_selected.png"))); // NOI18N
-        menuGroup.setIconSimple(new javax.swing.ImageIcon(getClass().getResource("/icon/group.png"))); // NOI18N
-        menuGroup.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuGroupActionPerformed(evt);
-            }
-        });
-        menu.add(menuGroup);
-
-        menuBox.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/box.png"))); // NOI18N
-        menuBox.setIconSelected(new javax.swing.ImageIcon(getClass().getResource("/icon/box_selected.png"))); // NOI18N
-        menuBox.setIconSimple(new javax.swing.ImageIcon(getClass().getResource("/icon/box.png"))); // NOI18N
-        menuBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuBoxActionPerformed(evt);
-            }
-        });
-        menu.add(menuBox);
 
         sp.setBackground(new java.awt.Color(242, 242, 242));
         sp.setBorder(null);
@@ -177,7 +155,7 @@ public class Menu_Left extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(menu, javax.swing.GroupLayout.PREFERRED_SIZE, 200, Short.MAX_VALUE)
+            .addComponent(menu, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(sp)
@@ -196,34 +174,14 @@ public class Menu_Left extends javax.swing.JPanel {
     private void menuMessageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuMessageActionPerformed
         if (!menuMessage.isSelected()) {
             menuMessage.setSelected(true);
-            menuGroup.setSelected(false);
-            menuBox.setSelected(false);
+            //menuGroup.setSelected(false);
+            //menuBox.setSelected(false);
             showMessage();
         }
     }//GEN-LAST:event_menuMessageActionPerformed
 
-    private void menuGroupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuGroupActionPerformed
-        if (!menuGroup.isSelected()) {
-            menuMessage.setSelected(false);
-            menuGroup.setSelected(true);
-            menuBox.setSelected(false);
-            showGroup();
-        }
-    }//GEN-LAST:event_menuGroupActionPerformed
-
-    private void menuBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuBoxActionPerformed
-        if (!menuBox.isSelected()) {
-            menuMessage.setSelected(false);
-            menuGroup.setSelected(false);
-            menuBox.setSelected(true);
-            showBox();
-        }
-    }//GEN-LAST:event_menuBoxActionPerformed
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLayeredPane menu;
-    private component.MenuButton menuBox;
-    private component.MenuButton menuGroup;
     private javax.swing.JLayeredPane menuList;
     private component.MenuButton menuMessage;
     private javax.swing.JScrollPane sp;

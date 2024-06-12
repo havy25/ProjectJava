@@ -16,7 +16,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="menu" alignment="0" pref="200" max="32767" attributes="0"/>
+          <Component id="menu" alignment="0" pref="250" max="32767" attributes="0"/>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Component id="sp" max="32767" attributes="0"/>
@@ -52,47 +52,15 @@
         <Component class="component.MenuButton" name="menuMessage">
           <Properties>
             <Property name="iconSelected" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/com/raven/icon/message_selected.png"/>
+              <Image iconType="3" name="/icon/message_selected.png"/>
             </Property>
             <Property name="iconSimple" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/com/raven/icon/message.png"/>
+              <Image iconType="3" name="/icon/message.png"/>
             </Property>
             <Property name="selected" type="boolean" value="true"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuMessageActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="component.MenuButton" name="menuGroup">
-          <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/com/raven/icon/group.png"/>
-            </Property>
-            <Property name="iconSelected" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/com/raven/icon/group_selected.png"/>
-            </Property>
-            <Property name="iconSimple" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/com/raven/icon/group.png"/>
-            </Property>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuGroupActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="component.MenuButton" name="menuBox">
-          <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/com/raven/icon/box.png"/>
-            </Property>
-            <Property name="iconSelected" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/com/raven/icon/box_selected.png"/>
-            </Property>
-            <Property name="iconSimple" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/com/raven/icon/box.png"/>
-            </Property>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuBoxActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
