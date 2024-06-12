@@ -18,6 +18,8 @@ public class Login extends javax.swing.JPanel {
     }
 
     private void init() {
+         P_Login login = new P_Login();
+        P_Register register = new P_Register();
         PublicEvent.getInstance().addEventLogin(new EventLogin() {
             @Override
             public void login(Model_Login data) {
@@ -69,15 +71,19 @@ public class Login extends javax.swing.JPanel {
             @Override
             public void goRegister() {
                 slide.show(1);
+                login.setVisible(false);
+            register.setVisible(true);
+                
             }
 
             @Override
             public void goLogin() {
                 slide.show(0);
+                register.setVisible(false);
+            login.setVisible(true);
             }
         });
-        P_Login login = new P_Login();
-        P_Register register = new P_Register();
+       
         slide.init(login, register);
     }
 
@@ -85,44 +91,21 @@ public class Login extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        pic = new swing.PictureBox();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        pictureBox1 = new swing.PictureBox();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         slide = new swing.PanelSlide();
+        pic = new swing.PictureBox();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        pic.setImage(new javax.swing.ImageIcon(getClass().getResource("/icon/login_image.png"))); // NOI18N
+        pictureBox1.setImage(new javax.swing.ImageIcon(getClass().getResource("/icon/configuration.png"))); // NOI18N
+        add(pictureBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 110, 220, 240));
 
-        jLabel2.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(66, 66, 66));
-        jLabel2.setText("@Copyright By Tham & Vy");
-
-        pic.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        javax.swing.GroupLayout picLayout = new javax.swing.GroupLayout(pic);
-        pic.setLayout(picLayout);
-        picLayout.setHorizontalGroup(
-            picLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(picLayout.createSequentialGroup()
-                .addGap(0, 0, 0)
-                .addComponent(jLabel2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        picLayout.setVerticalGroup(
-            picLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, picLayout.createSequentialGroup()
-                .addContainerGap(519, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addGap(0, 0, 0))
-        );
-
-        jLabel1.setBackground(new java.awt.Color(32, 140, 215));
-        jLabel1.setOpaque(true);
-
-        jPanel1.setBackground(new java.awt.Color(32, 140, 215));
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -132,11 +115,11 @@ public class Login extends javax.swing.JPanel {
         slide.setLayout(slideLayout);
         slideLayout.setHorizontalGroup(
             slideLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 376, Short.MAX_VALUE)
+            .addGap(0, 406, Short.MAX_VALUE)
         );
         slideLayout.setVerticalGroup(
             slideLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 351, Short.MAX_VALUE)
+            .addGap(0, 396, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -173,41 +156,41 @@ public class Login extends javax.swing.JPanel {
                 .addGap(1, 1, 1))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(pic, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(166, 166, 166))
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(252, 70, 420, 410));
+
+        pic.setImage(new javax.swing.ImageIcon(getClass().getResource("/icon/login_image1.png"))); // NOI18N
+
+        javax.swing.GroupLayout picLayout = new javax.swing.GroupLayout(pic);
+        pic.setLayout(picLayout);
+        picLayout.setHorizontalGroup(
+            picLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 340, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(pic, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE))
+        picLayout.setVerticalGroup(
+            picLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 290, Short.MAX_VALUE)
         );
+
+        add(pic, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 120, 340, 290));
+
+        jLabel2.setBackground(new java.awt.Color(255, 51, 51));
+        jLabel2.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 102));
+        jLabel2.setText("@Copyright Tham & Vy");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 480, 270, 40));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/earth.png"))); // NOI18N
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 950, 530));
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private swing.PictureBox pic;
+    private swing.PictureBox pictureBox1;
     private swing.PanelSlide slide;
     // End of variables declaration//GEN-END:variables
 }

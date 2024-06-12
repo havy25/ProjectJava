@@ -88,8 +88,8 @@ public class Main extends javax.swing.JFrame {
         body = new javax.swing.JLayeredPane();
         vIew_Image = new form.VIew_Image();
         home = new form.Home();
-        login = new form.Login();
         loading = new form.Loading();
+        login = new form.Login();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -155,8 +155,8 @@ public class Main extends javax.swing.JFrame {
         body.setLayer(vIew_Image, javax.swing.JLayeredPane.POPUP_LAYER);
         body.add(vIew_Image, "card3");
         body.add(home, "card2");
-        body.add(login, "card4");
         body.add(loading, "card5");
+        body.add(login, "card5");
 
         javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);
         background.setLayout(backgroundLayout);
@@ -165,7 +165,7 @@ public class Main extends javax.swing.JFrame {
             .addComponent(title, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(backgroundLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(body, javax.swing.GroupLayout.DEFAULT_SIZE, 931, Short.MAX_VALUE)
+                .addComponent(body, javax.swing.GroupLayout.DEFAULT_SIZE, 950, Short.MAX_VALUE)
                 .addContainerGap())
         );
         backgroundLayout.setVerticalGroup(
@@ -174,7 +174,7 @@ public class Main extends javax.swing.JFrame {
                 .addGap(0, 0, 0)
                 .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(body, javax.swing.GroupLayout.DEFAULT_SIZE, 606, Short.MAX_VALUE)
+                .addComponent(body, javax.swing.GroupLayout.DEFAULT_SIZE, 530, Short.MAX_VALUE)
                 .addContainerGap())
         );
 

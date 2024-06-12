@@ -25,19 +25,22 @@ public class P_Register extends javax.swing.JPanel {
         txtUser = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         txtPass = new javax.swing.JPasswordField();
+        jLabel3 = new javax.swing.JLabel();
+        txtRePassword = new javax.swing.JPasswordField();
         cmdRegister = new javax.swing.JButton();
         cmdBackLogin = new javax.swing.JButton();
-        txtRePassword = new javax.swing.JPasswordField();
-        jLabel3 = new javax.swing.JLabel();
         lbError = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(153, 255, 255));
+        setBackground(new java.awt.Color(0, 0, 0));
 
-        lbTitle.setFont(new java.awt.Font("sansserif", 0, 30)); // NOI18N
-        lbTitle.setForeground(new java.awt.Color(87, 87, 87));
+        lbTitle.setBackground(new java.awt.Color(204, 204, 204));
+        lbTitle.setFont(new java.awt.Font("sansserif", 1, 30)); // NOI18N
+        lbTitle.setForeground(new java.awt.Color(255, 255, 255));
         lbTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbTitle.setText("Register");
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("User Name");
 
         txtUser.setForeground(new java.awt.Color(204, 204, 204));
@@ -56,6 +59,8 @@ public class P_Register extends javax.swing.JPanel {
             }
         });
 
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Password");
 
         txtPass.setForeground(new java.awt.Color(204, 204, 204));
@@ -69,24 +74,9 @@ public class P_Register extends javax.swing.JPanel {
             }
         });
 
-        cmdRegister.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        cmdRegister.setText("Register");
-        cmdRegister.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cmdRegisterActionPerformed(evt);
-            }
-        });
-
-        cmdBackLogin.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        cmdBackLogin.setForeground(new java.awt.Color(15, 128, 206));
-        cmdBackLogin.setText("Back Login");
-        cmdBackLogin.setContentAreaFilled(false);
-        cmdBackLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        cmdBackLogin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cmdBackLoginActionPerformed(evt);
-            }
-        });
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Confirm Password");
 
         txtRePassword.setForeground(new java.awt.Color(204, 204, 204));
         txtRePassword.setText("Enter Password");
@@ -99,7 +89,32 @@ public class P_Register extends javax.swing.JPanel {
             }
         });
 
-        jLabel3.setText("Confirm Password");
+        cmdRegister.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cmdRegister.setText("Register");
+        cmdRegister.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmdRegisterActionPerformed(evt);
+            }
+        });
+
+        cmdBackLogin.setBackground(new java.awt.Color(0, 0, 0));
+        cmdBackLogin.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
+        cmdBackLogin.setForeground(new java.awt.Color(15, 128, 206));
+        cmdBackLogin.setText("Back Login");
+        cmdBackLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        cmdBackLogin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                cmdBackLoginMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                cmdBackLoginMouseExited(evt);
+            }
+        });
+        cmdBackLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmdBackLoginActionPerformed(evt);
+            }
+        });
 
         lbError.setFont(new java.awt.Font("sansserif", 0, 11)); // NOI18N
         lbError.setForeground(new java.awt.Color(255, 0, 0));
@@ -146,12 +161,12 @@ public class P_Register extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtRePassword, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtRePassword, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(cmdRegister, javax.swing.GroupLayout.DEFAULT_SIZE, 57, Short.MAX_VALUE)
+                    .addComponent(cmdRegister, javax.swing.GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
                     .addComponent(cmdBackLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 18, Short.MAX_VALUE)
                 .addComponent(lbError)
                 .addContainerGap())
         );
@@ -162,7 +177,7 @@ public class P_Register extends javax.swing.JPanel {
     }//GEN-LAST:event_cmdBackLoginActionPerformed
 
     private void cmdRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdRegisterActionPerformed
-        String userName = txtUser.getText().trim();
+          String userName = txtUser.getText().trim();
         String password = String.valueOf(txtPass.getPassword());
         String confirmPassword = String.valueOf(txtRePassword.getPassword());
         if (userName.equals("")) {
@@ -184,6 +199,30 @@ public class P_Register extends javax.swing.JPanel {
                 }
             });
         }
+//        String userName = txtUser.getText().trim();
+//        String password = String.valueOf(txtPass.getPassword());
+//        String confirmPassword = String.valueOf(txtRePassword.getPassword());
+//        if (userName.equals("")) {
+//            txtUser.grabFocus();
+//        } else if (password.equals("")) {
+//            txtPass.grabFocus();
+//        } else if (!password.equals(confirmPassword)) {
+//            txtPass.grabFocus();
+//        } else {
+//            Model_Register data = new Model_Register(userName, password);
+//            PublicEvent.getInstance().getEventLogin().register(data, new EventMessage() {
+//                @Override
+//                public void callMessage(Model_Message message) {
+//                    if (!message.isAction()) {
+//                        lbError.setText(message.getMessage());
+//                    } else {
+//                        PublicEvent.getInstance().getEventMain().initChat();
+//                    }
+//                }
+//            });
+//        }
+
+         
     }//GEN-LAST:event_cmdRegisterActionPerformed
 
     private void txtUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUserActionPerformed
@@ -213,6 +252,8 @@ public class P_Register extends javax.swing.JPanel {
         if (txtUser.getText().equals("")) {
         txtUser.setText("Enter Username"); 
        txtUser.setForeground(new Color(153,153,153));
+    }else {
+        txtUser.setForeground(Color.BLACK); // Đảm bảo màu chữ là màu đen khi có nội dung
     }
     }//GEN-LAST:event_txtUserFocusLost
 
@@ -221,25 +262,41 @@ public class P_Register extends javax.swing.JPanel {
            if (txtPass.getText().equals("")) {
         txtPass.setText("Enter Password"); 
        txtPass.setForeground(new Color(153,153,153));
+    }else {
+        txtPass.setForeground(Color.BLACK); // Đảm bảo màu chữ là màu đen khi có nội dung
     }
     }//GEN-LAST:event_txtPassFocusLost
 
     private void txtRePasswordFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtRePasswordFocusGained
         // TODO add your handling code here:
-         if (txtPass.getText().equals("Enter Password")){
-            txtPass.setText("");
-            txtPass.setForeground(new Color(153,153,153));
+         if (txtRePassword.getText().equals("Enter Password")){
+            txtRePassword.setText("");
+            txtRePassword.setForeground(new Color(153,153,153));
         
         }
     }//GEN-LAST:event_txtRePasswordFocusGained
 
     private void txtRePasswordFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtRePasswordFocusLost
         // TODO add your handling code here:
-             if (txtPass.getText().equals("")) {
-        txtPass.setText("Enter Password"); 
-       txtPass.setForeground(new Color(153,153,153));
-             }
+             if (txtRePassword.getText().equals("")) {
+        txtRePassword.setText("Enter Password"); 
+       txtRePassword.setForeground(new Color(153,153,153));
+             }else {
+        txtRePassword.setForeground(Color.BLACK); // Đảm bảo màu chữ là màu đen khi có nội dung
+    }
     }//GEN-LAST:event_txtRePasswordFocusLost
+
+    private void cmdBackLoginMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cmdBackLoginMouseEntered
+        // TODO add your handling code here:
+        cmdBackLogin.setBackground(new java.awt.Color(255, 255, 255)); // Đổi màu khi hover
+        cmdBackLogin.setForeground(new java.awt.Color(0,0,0)); // Đổi màu chữ khi hover
+    }//GEN-LAST:event_cmdBackLoginMouseEntered
+
+    private void cmdBackLoginMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cmdBackLoginMouseExited
+        // TODO add your handling code here:
+       cmdBackLogin.setBackground(new java.awt.Color(0,0,0)); // Màu gốc
+        cmdBackLogin.setForeground(new java.awt.Color(15, 128, 206)); // Màu chữ gốc
+    }//GEN-LAST:event_cmdBackLoginMouseExited
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

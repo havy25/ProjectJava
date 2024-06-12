@@ -22,15 +22,16 @@ public class P_Login extends javax.swing.JPanel {
         cmdLogin = new javax.swing.JButton();
         cmdRegister = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(153, 255, 255));
+        setBackground(new java.awt.Color(0, 0, 0));
         setForeground(new java.awt.Color(0, 204, 255));
 
-        lbTitle.setFont(new java.awt.Font("sansserif", 0, 30)); // NOI18N
-        lbTitle.setForeground(new java.awt.Color(87, 87, 87));
+        lbTitle.setFont(new java.awt.Font("sansserif", 1, 30)); // NOI18N
+        lbTitle.setForeground(new java.awt.Color(255, 255, 255));
         lbTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbTitle.setText("Login");
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("User Name");
 
         txtUser.setForeground(new java.awt.Color(204, 204, 204));
@@ -45,6 +46,7 @@ public class P_Login extends javax.swing.JPanel {
         });
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Password");
 
         txtPass.setForeground(new java.awt.Color(204, 204, 204));
@@ -71,11 +73,19 @@ public class P_Login extends javax.swing.JPanel {
             }
         });
 
+        cmdRegister.setBackground(new java.awt.Color(0, 0, 0));
         cmdRegister.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         cmdRegister.setForeground(new java.awt.Color(15, 128, 206));
         cmdRegister.setText("Register");
-        cmdRegister.setContentAreaFilled(false);
         cmdRegister.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        cmdRegister.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                cmdRegisterMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                cmdRegisterMouseExited(evt);
+            }
+        });
         cmdRegister.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdRegisterActionPerformed(evt);
@@ -88,19 +98,17 @@ public class P_Login extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lbTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtPass)
-                            .addComponent(txtUser, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 336, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(cmdLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(cmdLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cmdRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(cmdRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6))
+                    .addComponent(txtPass)
+                    .addComponent(txtUser, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 336, Short.MAX_VALUE))
                 .addGap(20, 20, 20))
         );
         layout.setVerticalGroup(
@@ -112,15 +120,15 @@ public class P_Login extends javax.swing.JPanel {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtUser, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(12, 12, 12)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtPass, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cmdRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cmdLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 35, Short.MAX_VALUE))
+                    .addComponent(cmdLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmdRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(45, 45, 45))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -129,7 +137,8 @@ public class P_Login extends javax.swing.JPanel {
     }//GEN-LAST:event_cmdRegisterActionPerformed
 
     private void cmdLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdLoginActionPerformed
-        PublicEvent.getInstance().getEventLogin().login(new Model_Login(txtUser.getText(), String.valueOf(txtPass.getPassword())));
+    PublicEvent.getInstance().getEventLogin().login(new Model_Login(txtUser.getText(), String.valueOf(txtPass.getPassword())));
+ 
     }//GEN-LAST:event_cmdLoginActionPerformed
 
     private void txtPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPassActionPerformed
@@ -146,9 +155,11 @@ public class P_Login extends javax.swing.JPanel {
 
     private void txtUserFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtUserFocusLost
         // TODO add your handling code here:
-       if (txtUser.getText().equals("")) {
-        txtUser.setText("Enter Username"); 
-       txtUser.setForeground(new Color(153,153,153));
+      if (txtUser.getText().equals("")) {
+        txtUser.setText("Enter Username");
+        txtUser.setForeground(Color.BLACK); // Đặt màu chữ thành màu xám cho placeholder
+    } else {
+        txtUser.setForeground(Color.BLACK); // Đảm bảo màu chữ là màu đen khi có nội dung
     }
     }//GEN-LAST:event_txtUserFocusLost
 
@@ -165,9 +176,23 @@ public class P_Login extends javax.swing.JPanel {
         // TODO add your handling code here:
              if (txtPass.getText().equals("")) {
         txtPass.setText("Enter Password"); 
-       txtPass.setForeground(new Color(153,153,153));
+       txtPass.setForeground(Color.BLACK);
+    }else {
+        txtPass.setForeground(Color.BLACK); // Đảm bảo màu chữ là màu đen khi có nội dung
     }
     }//GEN-LAST:event_txtPassFocusLost
+
+    private void cmdRegisterMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cmdRegisterMouseEntered
+        // TODO add your handling code here:
+        cmdRegister.setBackground(new java.awt.Color(255, 255, 255)); // Đổi màu khi hover
+        cmdRegister.setForeground(new java.awt.Color(0,0,0)); // Đổi màu chữ khi hover
+    }//GEN-LAST:event_cmdRegisterMouseEntered
+
+    private void cmdRegisterMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cmdRegisterMouseExited
+        // TODO add your handling code here:
+        cmdRegister.setBackground(new java.awt.Color(0, 0, 0)); // Màu gốc
+        cmdRegister.setForeground(new java.awt.Color(15, 128, 206)); // Màu chữ gốc
+    }//GEN-LAST:event_cmdRegisterMouseExited
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
