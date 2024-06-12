@@ -4,7 +4,7 @@ import app.MessageType;
 import emoji.Emogi;
 import emoji.Model_Emoji;
 import event.PublicEvent;
-import main.Main;
+import main.MainClient1;
 import model.Model_Send_Message;
 import model.Model_User_Account;
 import service.Service;
@@ -81,7 +81,7 @@ public class Panel_More extends javax.swing.JPanel {
                         return "Image File";
                     }
                 });
-                int option = ch.showOpenDialog(Main.getFrames()[0]);
+                int option = ch.showOpenDialog(MainClient1.getFrames()[0]);
                 if (option == JFileChooser.APPROVE_OPTION) {
                     File files[] = ch.getSelectedFiles();
                     try {
@@ -106,7 +106,7 @@ public class Panel_More extends javax.swing.JPanel {
             @Override
             public void actionPerformed(ActionEvent ae) {
                 JFileChooser ch = new JFileChooser();
-                ch.showOpenDialog(Main.getFrames()[0]);
+                ch.showOpenDialog(MainClient1.getFrames()[0]);
                 //  Update next
 
             }

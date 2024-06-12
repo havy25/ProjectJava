@@ -20,6 +20,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.border.EmptyBorder;
 import net.miginfocom.swing.MigLayout;
+import audio.SoundEffect;
 
 public class Chat_Bottom extends javax.swing.JPanel {
 
@@ -59,7 +60,7 @@ public class Chat_Bottom extends javax.swing.JPanel {
             }
         });
         txt.setBorder(new EmptyBorder(5, 5, 5, 5));
-        txt.setHintText("Write Message Here ...");
+        txt.setHintText("Nhập tin nhắn ...");
         scroll.setViewportView(txt);
         ScrollBar sb = new ScrollBar();
         sb.setBackground(new Color(229, 229, 229));
@@ -120,6 +121,8 @@ public class Chat_Bottom extends javax.swing.JPanel {
             txt.setText("");
             txt.grabFocus();
             refresh();
+             // Phát âm thanh khi gửi tin nhắn thành công
+            SoundEffect.MESSAGE_SEND.play();
         } else {
             txt.grabFocus();
         }
