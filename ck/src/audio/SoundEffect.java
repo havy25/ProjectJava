@@ -11,7 +11,7 @@ import java.net.URL;
 public enum SoundEffect {
 
     MESSAGE_RECEIVE("/audio/Ring.wav", false),
-    FILE_SHARING("/audio/alarm.wav", false),
+    FILE_SHARING("/audio/Ring.wav", false),
     MESSAGE_SEND("/audio/Ring.wav", false);
 
     private Clip clip;

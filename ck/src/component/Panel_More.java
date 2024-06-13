@@ -4,7 +4,7 @@ import app.MessageType;
 import emoji.Emogi;
 import emoji.Model_Emoji;
 import event.PublicEvent;
-import main.MainClient1;
+import main.Main;
 import model.Model_Send_Message;
 import model.Model_User_Account;
 import service.Service;
@@ -81,7 +81,7 @@ public class Panel_More extends javax.swing.JPanel {
                         return "Image File";
                     }
                 });
-                int option = ch.showOpenDialog(MainClient1.getFrames()[0]);
+                int option = ch.showOpenDialog(Main.getFrames()[0]);
                 if (option == JFileChooser.APPROVE_OPTION) {
                     File files[] = ch.getSelectedFiles();
                     try {
@@ -106,7 +106,7 @@ public class Panel_More extends javax.swing.JPanel {
             @Override
             public void actionPerformed(ActionEvent ae) {
                 JFileChooser ch = new JFileChooser();
-                ch.showOpenDialog(MainClient1.getFrames()[0]);
+                ch.showOpenDialog(Main.getFrames()[0]);
                 //  Update next
 
             }
@@ -116,7 +116,7 @@ public class Panel_More extends javax.swing.JPanel {
 
     private JButton getEmojiStyle1() {
         OptionButton cmd = new OptionButton();
-        cmd.setIcon(Emogi.getInstance().getImoji(1).toSize(25, 25).getIcon());
+        cmd.setIcon(Emogi.getInstance().getImoji(1).toSize(35, 35).getIcon());
         cmd.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
@@ -135,7 +135,7 @@ public class Panel_More extends javax.swing.JPanel {
 
     private JButton getEmojiStyle2() {
         OptionButton cmd = new OptionButton();
-        cmd.setIcon(Emogi.getInstance().getImoji(21).toSize(25, 25).getIcon());
+        cmd.setIcon(Emogi.getInstance().getImoji(21).toSize(35,35).getIcon());
         cmd.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
@@ -185,7 +185,7 @@ public class Panel_More extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 84, Short.MAX_VALUE)
+            .addGap(0, 50, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 

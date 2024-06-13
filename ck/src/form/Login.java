@@ -103,7 +103,7 @@ public class Login extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         pictureBox1.setImage(new javax.swing.ImageIcon(getClass().getResource("/icon/configuration.png"))); // NOI18N
-        add(pictureBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 110, 220, 240));
+        add(pictureBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 140, 190, 240));
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -115,7 +115,7 @@ public class Login extends javax.swing.JPanel {
         slide.setLayout(slideLayout);
         slideLayout.setHorizontalGroup(
             slideLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 406, Short.MAX_VALUE)
+            .addGap(0, 326, Short.MAX_VALUE)
         );
         slideLayout.setVerticalGroup(
             slideLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -156,7 +156,7 @@ public class Login extends javax.swing.JPanel {
                 .addGap(1, 1, 1))
         );
 
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(252, 70, 420, 410));
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(252, 70, 340, 410));
 
         pic.setImage(new javax.swing.ImageIcon(getClass().getResource("/icon/login_image1.png"))); // NOI18N
 
@@ -171,7 +171,7 @@ public class Login extends javax.swing.JPanel {
             .addGap(0, 290, Short.MAX_VALUE)
         );
 
-        add(pic, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 120, 340, 290));
+        add(pic, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 130, 340, 290));
 
         jLabel2.setBackground(new java.awt.Color(255, 51, 51));
         jLabel2.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N

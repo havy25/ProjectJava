@@ -50,14 +50,14 @@ public class VIew_Image extends javax.swing.JComponent {
         picLayout.setHorizontalGroup(
             picLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, picLayout.createSequentialGroup()
-                .addContainerGap(735, Short.MAX_VALUE)
+                .addContainerGap(740, Short.MAX_VALUE)
                 .addComponent(cmdSave)
                 .addContainerGap())
         );
         picLayout.setVerticalGroup(
             picLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, picLayout.createSequentialGroup()
-                .addContainerGap(464, Short.MAX_VALUE)
+                .addContainerGap(439, Short.MAX_VALUE)
                 .addComponent(cmdSave)
                 .addContainerGap())
         );

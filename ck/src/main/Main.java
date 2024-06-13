@@ -13,9 +13,9 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
-public class MainClient2 extends javax.swing.JFrame {
+public class Main extends javax.swing.JFrame {
 
-    public MainClient2() {
+    public Main() {
         initComponents();
         init();
     }
@@ -86,10 +86,10 @@ public class MainClient2 extends javax.swing.JFrame {
         cmdMinimize = new javax.swing.JButton();
         cmdClose = new javax.swing.JButton();
         body = new javax.swing.JLayeredPane();
-        vIew_Image = new form.VIew_Image();
         home = new form.Home();
         loading = new form.Loading();
         login = new form.Login();
+        vIew_Image = new form.VIew_Image();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -110,17 +110,18 @@ public class MainClient2 extends javax.swing.JFrame {
             }
         });
 
-        cmdMinimize.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/raven/icon/minimize.png"))); // NOI18N
+        cmdMinimize.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/minimize.png"))); // NOI18N
         cmdMinimize.setBorder(null);
         cmdMinimize.setContentAreaFilled(false);
         cmdMinimize.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        cmdMinimize.setInheritsPopupMenu(true);
         cmdMinimize.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdMinimizeActionPerformed(evt);
             }
         });
 
-        cmdClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/raven/icon/close.png"))); // NOI18N
+        cmdClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/close.png"))); // NOI18N
         cmdClose.setBorder(null);
         cmdClose.setContentAreaFilled(false);
         cmdClose.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -135,7 +136,7 @@ public class MainClient2 extends javax.swing.JFrame {
         titleLayout.setHorizontalGroup(
             titleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titleLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(745, Short.MAX_VALUE)
                 .addComponent(cmdMinimize)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cmdClose)
@@ -146,27 +147,29 @@ public class MainClient2 extends javax.swing.JFrame {
             .addGroup(titleLayout.createSequentialGroup()
                 .addGap(0, 0, 0)
                 .addGroup(titleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cmdClose, javax.swing.GroupLayout.DEFAULT_SIZE, 20, Short.MAX_VALUE)
+                    .addComponent(cmdClose, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(cmdMinimize, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(0, 0, 0))
         );
 
         body.setLayout(new java.awt.CardLayout());
-        body.setLayer(vIew_Image, javax.swing.JLayeredPane.POPUP_LAYER);
-        body.add(vIew_Image, "card3");
         body.add(home, "card2");
         body.add(loading, "card5");
         body.add(login, "card5");
+        body.setLayer(vIew_Image, javax.swing.JLayeredPane.POPUP_LAYER);
+        body.add(vIew_Image, "card3");
 
         javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);
         background.setLayout(backgroundLayout);
         backgroundLayout.setHorizontalGroup(
             backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(title, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(backgroundLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(body, javax.swing.GroupLayout.DEFAULT_SIZE, 950, Short.MAX_VALUE)
+                .addComponent(body, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(backgroundLayout.createSequentialGroup()
+                .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         backgroundLayout.setVerticalGroup(
             backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -185,7 +188,7 @@ public class MainClient2 extends javax.swing.JFrame {
             .addGroup(borderLayout.createSequentialGroup()
                 .addGap(1, 1, 1)
                 .addComponent(background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(1, 1, 1))
+                .addContainerGap())
         );
         borderLayout.setVerticalGroup(
             borderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -199,7 +202,7 @@ public class MainClient2 extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(border, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(border, javax.swing.GroupLayout.PREFERRED_SIZE, 803, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -231,12 +234,24 @@ public class MainClient2 extends javax.swing.JFrame {
 
     public static void main(String args[]) {
         FlatArcIJTheme.setup();
-        java.awt.EventQueue.invokeLater(new Runnable() {
+         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
-                new MainClient2().setVisible(true);
+                java.awt.EventQueue.invokeLater(new Runnable() {
+                    @Override
+                    public void run() {
+                        new Main().setVisible(true);
+                    }
+                });
             }
         });
+        thread.start();
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            @Override
+//            public void run() {
+//                new MainClient1().setVisible(true);
+//            }
+//        });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

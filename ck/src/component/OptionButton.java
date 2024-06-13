@@ -1,6 +1,7 @@
 package component;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Graphics;
 import javax.swing.JButton;
 
@@ -9,6 +10,7 @@ public class OptionButton extends JButton {
     public OptionButton() {
         setContentAreaFilled(false);
         setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        setPreferredSize(new Dimension(35, 35));
     }
 
     @Override
