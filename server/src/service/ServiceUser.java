@@ -1,6 +1,8 @@
 package service;
 
 import connection.DatabaseConnection;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import model.Model_Client;
 import model.Model_Login;
 import model.Model_Message;
@@ -39,7 +41,8 @@ public class ServiceUser {
                 con.setAutoCommit(false);
                 p = con.prepareStatement(INSERT_USER, PreparedStatement.RETURN_GENERATED_KEYS);
                 p.setString(1, data.getUserName());
-                p.setString(2, data.getPassword());
+              
+                 p.setString(2, hashPassword(data.getPassword())); // Mã hóa mật khẩu trước khi lưu
                 p.execute();
                 r = p.getGeneratedKeys();
                 r.first();
@@ -76,7 +79,7 @@ public class ServiceUser {
         Model_User_Account data = null;
         PreparedStatement p = con.prepareStatement(LOGIN);
         p.setString(1, login.getUserName());
-        p.setString(2, login.getPassword());
+        p.setString(2, hashPassword(login.getPassword())); // Mã hóa mật khẩu trước khi so sánh
         ResultSet r = p.executeQuery();
         if (r.first()) {
             int userID = r.getInt(1);
@@ -125,4 +128,18 @@ public class ServiceUser {
     private final String CHECK_USER = "select UserID from user where UserName =? limit 1";
     //  Instance
     private final Connection con;
+    private String hashPassword(String password) {
+    try {
+        MessageDigest md = MessageDigest.getInstance("SHA-256");
+        byte[] hash = md.digest(password.getBytes());
+        StringBuilder sb = new StringBuilder();
+        for (byte b : hash) {
+            sb.append(Integer.toString((b & 0xff) + 0x100, 16).substring(1));
+        }
+        return sb.toString();
+    } catch (NoSuchAlgorithmException e) {
+        e.printStackTrace();
+        return null;
+    }
+}
 }
