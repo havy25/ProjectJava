@@ -25,6 +25,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JTextArea;
 
+
 public class Service {
     
     private static Service instance;
@@ -34,6 +35,7 @@ public class Service {
     private List<Model_Client> listClient;
     private JTextArea textArea;
     private final int PORT_NUMBER = 9999;
+     private boolean isServerRunning;
     
     public static Service getInstance(JTextArea textArea) {
         if (instance == null) {
@@ -153,8 +155,16 @@ public class Service {
             }
         });
         server.start();
+       isServerRunning = true;
         textArea.append("Server has Start on port : " + PORT_NUMBER + "\n");
     }
+    public void stopServer() {
+     if (isServerRunning) {
+            server.stop();
+            isServerRunning = false;
+            textArea.append("Server has Stopped\n");
+        }
+}
     
     private void userConnect(int userID) {
         server.getBroadcastOperations().sendEvent("user_status", userID, true);

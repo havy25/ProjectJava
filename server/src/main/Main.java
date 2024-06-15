@@ -4,14 +4,20 @@ package main;
 import connection.DatabaseConnection;
 import service.Service;
 import java.sql.SQLException;
+import javax.swing.ImageIcon;
+import javax.swing.SwingUtilities;
+
 
 
 public class Main extends javax.swing.JFrame {
 
     public Main() {
         initComponents();
+        init();
     }
-
+     private void init() {
+        setIconImage(new ImageIcon(getClass().getResource("/icon/logoServer.png")).getImage());
+     }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -19,6 +25,11 @@ public class Main extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         txt = new javax.swing.JTextArea();
+        StartServer = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
+        StopServer = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -28,24 +39,80 @@ public class Main extends javax.swing.JFrame {
         });
 
         txt.setEditable(false);
+        txt.setBackground(new java.awt.Color(204, 204, 255));
         txt.setColumns(20);
         txt.setRows(5);
         jScrollPane1.setViewportView(txt);
+
+        StartServer.setText("Khỏi động máy chủ");
+        StartServer.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                StartServerMouseClicked(evt);
+            }
+        });
+        StartServer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                StartServerActionPerformed(evt);
+            }
+        });
+
+        jTextField1.setText("9999");
+
+        StopServer.setText("Dừng máy chủ");
+        StopServer.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                StopServerMouseClicked(evt);
+            }
+        });
+        StopServer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                StopServerActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/server.png"))); // NOI18N
+
+        jLabel2.setText("Port:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 945, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(StartServer, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(StopServer, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 501, Short.MAX_VALUE)
+                .addContainerGap(15, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane1)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(StopServer, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(StartServer, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
                 .addContainerGap())
         );
 
@@ -54,13 +121,40 @@ public class Main extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-        try {
+//        try {
+//            DatabaseConnection.getInstance().connectToDatabase();
+//            Service.getInstance(txt).startServer();
+//        } catch (SQLException e) {
+//            txt.append("Error : " + e + "\n");
+//        }
+    }//GEN-LAST:event_formWindowOpened
+
+    private void StopServerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StopServerActionPerformed
+       
+    }//GEN-LAST:event_StopServerActionPerformed
+
+    private void StartServerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartServerActionPerformed
+   
+    }//GEN-LAST:event_StartServerActionPerformed
+
+    private void StartServerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_StartServerMouseClicked
+        // TODO add your handling code here:
+          try {
             DatabaseConnection.getInstance().connectToDatabase();
             Service.getInstance(txt).startServer();
         } catch (SQLException e) {
             txt.append("Error : " + e + "\n");
         }
-    }//GEN-LAST:event_formWindowOpened
+    }//GEN-LAST:event_StartServerMouseClicked
+
+    private void StopServerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_StopServerMouseClicked
+        // TODO add your handling code here:
+          try {
+            Service.getInstance(txt).stopServer();
+        } catch (Exception e) {
+            txt.append("Error : " + e + "\n");
+        }
+    }//GEN-LAST:event_StopServerMouseClicked
 
     /**
      * @param args the command line arguments
@@ -94,7 +188,12 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton StartServer;
+    private javax.swing.JButton StopServer;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextArea txt;
     // End of variables declaration//GEN-END:variables
 }
