@@ -135,58 +135,60 @@ public class Menu extends javax.swing.JPanel {
 //        }).start();
 //    }
       // Mở menu
-    private void OpenMenu() {
-        if (HMenu == null) return;
-        HMenu.setVisible(true);
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                for (int i = 0; i <= WidthMenu; i++) {
-                    final int width = i;
-                    try {
-                        Thread.sleep(2); // Để tạo hiệu ứng mượt hơn
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                    javax.swing.SwingUtilities.invokeLater(new Runnable() {
-                        @Override
-                        public void run() {
-                            HMenu.setSize(width, HeightMenu);
-                        }
-                    });
-                }
-            }
-        }).start();
-    }
-
-    private void CloseMenu() {
-        if (HMenu == null) return;
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                for (int i = WidthMenu; i > 0; i--) {
-                    final int width = i;
-                    try {
-                        Thread.sleep(2); // Để tạo hiệu ứng mượt hơn
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                    javax.swing.SwingUtilities.invokeLater(new Runnable() {
-                        @Override
-                        public void run() {
-                            HMenu.setSize(width, HeightMenu);
-                        }
-                    });
+  // Mở menu
+private void OpenMenu() {
+    if (HMenu == null) return;
+    HMenu.setVisible(true);
+    new Thread(new Runnable() {
+        @Override
+        public void run() {
+            for (int i = WidthMenu; i >= 0; i--) {
+                final int width = i;
+                try {
+                    Thread.sleep(2); // Để tạo hiệu ứng mượt hơn
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
                 javax.swing.SwingUtilities.invokeLater(new Runnable() {
                     @Override
                     public void run() {
-                        HMenu.setVisible(false);
+                        HMenu.setSize(width, HeightMenu);
                     }
                 });
             }
-        }).start();
-    }
+        }
+    }).start();
+}
+
+private void CloseMenu() {
+    if (HMenu == null) return;
+    new Thread(new Runnable() {
+        @Override
+        public void run() {
+            for (int i = 0; i <= WidthMenu; i++) {
+                final int width = i;
+                try {
+                    Thread.sleep(2); // Để tạo hiệu ứng mượt hơn
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                javax.swing.SwingUtilities.invokeLater(new Runnable() {
+                    @Override
+                    public void run() {
+                        HMenu.setSize(width, HeightMenu);
+                    }
+                });
+            }
+            javax.swing.SwingUtilities.invokeLater(new Runnable() {
+                @Override
+                public void run() {
+                    HMenu.setVisible(false);
+                }
+            });
+        }
+    }).start();
+}
+
     
       private int WidthMenu =  212; 
           private int HeightMenu = 371;
@@ -247,21 +249,20 @@ public class Menu extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(Menu))
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(HMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 7, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Menu))
-                .addContainerGap(57, Short.MAX_VALUE))
+                .addComponent(HMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 26, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(18, Short.MAX_VALUE)
                 .addComponent(Menu, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(HMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(HMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

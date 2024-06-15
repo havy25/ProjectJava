@@ -16,7 +16,7 @@ public class Chat extends javax.swing.JPanel {
     private Chat_Title chatTitle;
     private Chat_Body chatBody;
     private Chat_Bottom chatBottom;
-    private Menu chatMenu;
+  //  private Menu chatMenu;
 
     public Chat() {
         initComponents();
@@ -26,7 +26,7 @@ public class Chat extends javax.swing.JPanel {
     private void init() {
         setLayout(new MigLayout("fillx", "0[fill]0", "0[]0[100%, fill]0[shrink 0]0"));
         chatTitle = new Chat_Title();
-        chatMenu = new Menu(); 
+      //  chatMenu = new Menu(); 
         chatBody = new Chat_Body();
         chatBottom = new Chat_Bottom();
         PublicEvent.getInstance().addEventChat(new EventChat() {
@@ -43,8 +43,8 @@ public class Chat extends javax.swing.JPanel {
             }
         });
    
-          add(chatTitle, "");
-    add(chatMenu, "wrap");
+          add(chatTitle, "wrap");
+//    add(chatMenu, "wrap");
         add(chatBody, "wrap");
         add(chatBottom, "h ::50%");
   

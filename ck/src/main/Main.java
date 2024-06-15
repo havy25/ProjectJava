@@ -4,6 +4,7 @@ import com.formdev.flatlaf.intellijthemes.FlatArcIJTheme;
 import event.EventImageView;
 import event.EventMain;
 import event.PublicEvent;
+import java.awt.Color;
 import model.Model_User_Account;
 import service.Service;
 import swing.ComponentResizer;
@@ -12,6 +13,10 @@ import java.awt.Toolkit;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import menu.drawer.Drawer;
+import menu.drawer.DrawerController;
+import menu.drawer.DrawerItem;
+import menu.drawer.EventDrawer;
 
 public class Main extends javax.swing.JFrame {
 
@@ -19,8 +24,35 @@ public class Main extends javax.swing.JFrame {
         initComponents();
         init();
     }
+      private DrawerController drawer;
 
     private void init() {
+        drawer = Drawer.newDrawer(this)
+                .background(new Color(90, 90, 90))
+                .closeOnPress(true)
+                .backgroundTransparent(0.3f)
+                .leftDrawer(true)
+                .enableScroll(true)
+                .enableScrollUI(false)
+                .headerHeight(160)
+                .header(new Header())
+                .space(3)
+                .addChild(new DrawerItem("User ").icon(new ImageIcon(getClass().getResource("/icon/user2.png"))).build())
+                .addChild(new DrawerItem("Đổi mật khẩu").icon(new ImageIcon(getClass().getResource("/icon/cont.png"))).build())
+                .addChild(new DrawerItem("Report").icon(new ImageIcon(getClass().getResource("/icon/report.png"))).build())
+                .addChild(new DrawerItem("Chat Box").icon(new ImageIcon(getClass().getResource("/icon/income.png"))).build())
+                //.addChild(new DrawerItem("Expense").icon(new ImageIcon(getClass().getResource("/icon/expense.png"))).build())
+                //.addChild(new DrawerItem("Datas").icon(new ImageIcon(getClass().getResource("/icon/data.png"))).build())
+                .addFooter(new DrawerItem("Exit").icon(new ImageIcon(getClass().getResource("/icon/exit.png"))).build())
+                .event(new EventDrawer() {
+                    @Override
+                    public void selected(int index, DrawerItem item) {
+                     if(drawer.isShow()){
+                         drawer.hide();
+                     }
+                    }
+                })
+                .build();
         setIconImage(new ImageIcon(getClass().getResource("/icon/icon.png")).getImage());
         ComponentResizer com = new ComponentResizer();
         com.registerComponent(this);
@@ -86,6 +118,7 @@ public class Main extends javax.swing.JFrame {
         cmdMinimize = new javax.swing.JButton();
         cmdClose = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         body = new javax.swing.JLayeredPane();
         home = new form.Home();
         loading = new form.Loading();
@@ -136,14 +169,23 @@ public class Main extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 102, 102));
         jLabel1.setText("Welcome App-Chat");
 
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/menu-bar.png"))); // NOI18N
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel3MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout titleLayout = new javax.swing.GroupLayout(title);
         title.setLayout(titleLayout);
         titleLayout.setHorizontalGroup(
             titleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titleLayout.createSequentialGroup()
-                .addGap(22, 22, 22)
+                .addGap(12, 12, 12)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 535, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 649, Short.MAX_VALUE)
                 .addComponent(cmdMinimize)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cmdClose)
@@ -151,11 +193,13 @@ public class Main extends javax.swing.JFrame {
         );
         titleLayout.setVerticalGroup(
             titleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(cmdClose, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
+            .addComponent(cmdClose, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(cmdMinimize, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(titleLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addGroup(titleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -184,7 +228,7 @@ public class Main extends javax.swing.JFrame {
                 .addGap(0, 0, 0)
                 .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(body, javax.swing.GroupLayout.DEFAULT_SIZE, 530, Short.MAX_VALUE)
+                .addComponent(body, javax.swing.GroupLayout.DEFAULT_SIZE, 540, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -192,10 +236,10 @@ public class Main extends javax.swing.JFrame {
         border.setLayout(borderLayout);
         borderLayout.setHorizontalGroup(
             borderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(borderLayout.createSequentialGroup()
-                .addGap(1, 1, 1)
-                .addComponent(background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, borderLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(background, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(84, 84, 84))
         );
         borderLayout.setVerticalGroup(
             borderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -209,7 +253,7 @@ public class Main extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(border, javax.swing.GroupLayout.PREFERRED_SIZE, 803, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(border, javax.swing.GroupLayout.PREFERRED_SIZE, 960, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -238,6 +282,15 @@ public class Main extends javax.swing.JFrame {
     private void cmdMinimizeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdMinimizeActionPerformed
         this.setState(JFrame.ICONIFIED);
     }//GEN-LAST:event_cmdMinimizeActionPerformed
+
+    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
+        // TODO add your handling code here:
+           if (drawer.isShow()) {
+            drawer.hide();
+        } else {
+            drawer.show();
+        }
+    }//GEN-LAST:event_jLabel3MouseClicked
 
     public static void main(String args[]) {
         FlatArcIJTheme.setup();
@@ -269,6 +322,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton cmdMinimize;
     private form.Home home;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
     private form.Loading loading;
     private form.Login login;
     private javax.swing.JPanel title;
