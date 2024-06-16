@@ -17,6 +17,7 @@ import menu.drawer.Drawer;
 import menu.drawer.DrawerController;
 import menu.drawer.DrawerItem;
 import menu.drawer.EventDrawer;
+import form.Report;
 
 public class Main extends javax.swing.JFrame {
 
@@ -47,12 +48,20 @@ public class Main extends javax.swing.JFrame {
                 .event(new EventDrawer() {
                     @Override
                     public void selected(int index, DrawerItem item) {
-                     if(drawer.isShow()){
-                         drawer.hide();
-                     }
+                        if (drawer.isShow()) {
+                            drawer.hide();
+                        }
+                        if ("Exit".equals(item.getText())) {
+                            logout();
+                            exit();
+                        }
+                        if ("Report".equals(item.getText())) {
+                            showReportWindow();
+                        }
                     }
                 })
                 .build();
+        
         setIconImage(new ImageIcon(getClass().getResource("/icon/icon.png")).getImage());
         ComponentResizer com = new ComponentResizer();
         com.registerComponent(this);
@@ -105,7 +114,27 @@ public class Main extends javax.swing.JFrame {
 
         });
     }
+    private void logout() {
+        // Ngắt kết nối với server
+        if (Service.getInstance().getClient() != null && Service.getInstance().getClient().connected()) {
+            Service.getInstance().getClient().disconnect();
+        }
+          // Ẩn menu kéo ra
+    drawer.hide();
+        // Xóa thông tin người dùng
+        Service.getInstance().setUser(null);
 
+ 
+    }
+     private void exit(){
+         this.setVisible(false);
+         Main main = new Main();
+         main.setVisible(true);
+}
+         private void showReportWindow() {
+        Report reportWindow = new Report();
+        reportWindow.setVisible(true);
+    }
 
     @SuppressWarnings("unchecked")
 

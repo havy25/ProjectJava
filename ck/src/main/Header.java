@@ -6,6 +6,9 @@ public class Header extends javax.swing.JPanel {
         initComponents();
     }
 
+      public void updateUserName(String userName) {
+        jLabel1.setText(userName);
+    }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -19,6 +22,9 @@ public class Header extends javax.swing.JPanel {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Javaswingdev.com");
+
+        imageAvatar1.setBackground(new java.awt.Color(204, 204, 255));
+        imageAvatar1.setImage(new javax.swing.ImageIcon(getClass().getResource("/icon/logo.jpg"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

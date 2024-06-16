@@ -15,6 +15,12 @@ public class P_Register extends javax.swing.JPanel {
 
         
     }
+       // Phương thức để xóa nội dung các ô nhập
+    public void clearFields() {
+        txtUser.setText("");
+        txtPass.setText("");
+        txtRePassword.setText("");
+    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents

@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
+import form.P_Login;
 
 public class Service {
 
@@ -115,6 +116,25 @@ public class Service {
             data.initReceive();
         }
     }
+    public void logout() {
+    // Ngắt kết nối với server
+    if (Service.getInstance().getClient() != null && Service.getInstance().getClient().connected()) {
+        Service.getInstance().getClient().disconnect();
+    }
+
+    // Xóa thông tin người dùng
+    Service.getInstance().setUser(null);
+
+//    // Xóa nội dung các ô nhập trong form login
+   // P_Login.clearFields();
+//
+//    // Hiển thị lại giao diện đăng nhập
+//    form.Home.setVisible(false);
+//    vIew_Image.setVisible(false);
+//    loading.setVisible(false);
+//    login.setVisible(true);
+}
+
 
     public Socket getClient() {
         return client;

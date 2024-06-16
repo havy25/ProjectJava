@@ -3,13 +3,33 @@ package form;
 import event.PublicEvent;
 import java.awt.Color;
 import model.Model_Login;
+import main.Header;
 
 public class P_Login extends javax.swing.JPanel {
+
+      private Header header; // Biến để lưu trữ đối tượng Header
 
     public P_Login() {
         initComponents();
     }
 
+    // Phương thức để lấy tên người dùng từ textUser
+    public String getUserName() {
+        return txtUser.getText();
+    }
+
+    // Phương thức để thiết lập đối tượng Header từ bên ngoài (có thể gọi từ Login)
+    public void setHeader(Header header) {
+        this.header = header;
+    }
+
+    // Khi đăng nhập thành công, gọi phương thức updateUserName từ Header để cập nhật tên người dùng
+    private void loginSuccessful() {
+        String userName = getUserName();
+        if (header != null) {
+            header.updateUserName(userName);
+        }
+    }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {

@@ -9,6 +9,7 @@ import model.Model_Register;
 import model.Model_User_Account;
 import service.Service;
 import io.socket.client.Ack;
+import main.Header;
 
 public class Login extends javax.swing.JPanel {
 
@@ -19,7 +20,8 @@ public class Login extends javax.swing.JPanel {
 
     private void init() {
          P_Login login = new P_Login();
-        P_Register register = new P_Register();
+        P_Register register = new P_Register();  
+        Header Panel = new Header();
         PublicEvent.getInstance().addEventLogin(new EventLogin() {
             @Override
             public void login(Model_Login data) {
@@ -85,6 +87,7 @@ public class Login extends javax.swing.JPanel {
         });
        
         slide.init(login, register);
+        
     }
 
     @SuppressWarnings("unchecked")
