@@ -1,5 +1,6 @@
 package component;
-
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import model.Model_File_Sender;
 import model.Model_Receive_Image;
 import java.awt.Color;
@@ -47,14 +48,23 @@ public class Chat_Item extends javax.swing.JLayeredPane {
     }
 
     public void setTime(String time) {
-        JLayeredPane layer = new JLayeredPane();
-        layer.setLayout(new FlowLayout(FlowLayout.RIGHT, 0, 0));
-        layer.setBorder(new EmptyBorder(0, 5, 10, 5));
-        label = new JLabel(time);
-        label.setForeground(new Color(110, 110, 110));
-        label.setHorizontalTextPosition(JLabel.LEFT);
-        layer.add(label);
-        add(layer);
+       JLayeredPane layer = new JLayeredPane();
+    layer.setLayout(new FlowLayout(FlowLayout.RIGHT, 0, 0));
+    layer.setBorder(new EmptyBorder(0, 5, 10, 5));
+
+    // Lấy thời gian hiện tại
+    LocalTime currentTime = LocalTime.now();
+
+    // Định dạng thời gian thành chuỗi
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("hh:mm a");
+    String timeString = currentTime.format(formatter);
+
+    // Đặt chuỗi thời gian vào label
+    label = new JLabel(timeString);
+    label.setForeground(new Color(110, 110, 110));
+    label.setHorizontalTextPosition(JLabel.LEFT);
+    layer.add(label);
+    add(layer);
     }
 
     public void setImage(boolean right, Model_File_Sender fileSender) {

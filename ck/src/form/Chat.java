@@ -2,7 +2,6 @@ package form;
 
 import component.Chat_Body;
 import component.Chat_Bottom;
-import component.Menu;
 import component.Chat_Title;
 import event.EventChat;
 import event.PublicEvent;

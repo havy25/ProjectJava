@@ -1,5 +1,6 @@
 package component;
-
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import model.Model_Receive_Image;
 import java.awt.Color;
 import javax.swing.Icon;
@@ -39,7 +40,15 @@ public class Chat_Left extends javax.swing.JLayeredPane {
     }
 
     public void setTime() {
-        txt.setTime("10:30 PM");    //  Testing
+         // Lấy thời gian hiện tại
+    LocalTime currentTime = LocalTime.now();
+    
+    // Định dạng thời gian thành chuỗi
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("hh:mm a");
+    String timeString = currentTime.format(formatter);
+        System.out.println(timeString);
+    // Đặt thời gian vào txt
+    txt.setTime(timeString);
     }
 
     @SuppressWarnings("unchecked")

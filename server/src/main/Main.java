@@ -17,6 +17,7 @@ public class Main extends javax.swing.JFrame {
     }
      private void init() {
         setIconImage(new ImageIcon(getClass().getResource("/icon/logoServer.png")).getImage());
+         setTitle("Start Server!");
      }
 
     @SuppressWarnings("unchecked")
