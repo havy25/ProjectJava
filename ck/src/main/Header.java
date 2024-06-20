@@ -21,7 +21,7 @@ public class Header extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("sansserif", 1, 15)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Javaswingdev.com");
+        jLabel1.setText("Your Account");
 
         imageAvatar1.setBackground(new java.awt.Color(204, 204, 255));
         imageAvatar1.setImage(new javax.swing.ImageIcon(getClass().getResource("/icon/logo.jpg"))); // NOI18N

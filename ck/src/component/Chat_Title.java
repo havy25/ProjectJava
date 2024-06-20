@@ -20,6 +20,7 @@ public class Chat_Title extends javax.swing.JPanel {
         lbName.setText(user.getUserName());
         if (user.isStatus()) {
             statusActive();
+            setStatusText("Online");
         } else {
             setStatusText("Offline");
         }
@@ -56,7 +57,7 @@ public class Chat_Title extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(229, 229, 229));
 
-        lbName.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        lbName.setFont(new java.awt.Font("sansserif", 1, 18)); // NOI18N
         lbName.setForeground(new java.awt.Color(66, 66, 66));
         lbName.setText("Name");
 
@@ -71,10 +72,11 @@ public class Chat_Title extends javax.swing.JPanel {
         layerLayout.setHorizontalGroup(
             layerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layerLayout.createSequentialGroup()
-                .addGroup(layerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lbName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lbStatus, javax.swing.GroupLayout.DEFAULT_SIZE, 261, Short.MAX_VALUE))
-                .addContainerGap(76, Short.MAX_VALUE))
+                .addContainerGap()
+                .addGroup(layerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbName, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(89, Short.MAX_VALUE))
         );
         layerLayout.setVerticalGroup(
             layerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -91,15 +93,14 @@ public class Chat_Title extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(layer, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(layer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(3, 3, 3)
-                .addComponent(layer)
-                .addContainerGap())
+                .addComponent(layer))
         );
     }// </editor-fold>//GEN-END:initComponents
 

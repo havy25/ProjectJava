@@ -55,7 +55,7 @@ public class Chat_Bottom extends javax.swing.JPanel {
                  if (ke.getKeyChar() == KeyEvent.VK_ENTER) {
                     // User pressed Enter key
                     eventSend(txt);
-                    ke.consume(); // Prevents the default action of Enter key (like new line)
+                    ke.consume();
                 }
             }
         });

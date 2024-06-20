@@ -1,345 +1,109 @@
-Updatecheck<|||>3<|||>1
-DoUsageStatistics<|||>3<|||>1
-UpdatecheckLastrun<|||>1<|||>2024-06-15 23:14:56
-LastUsageStatisticCall<|||>1<|||>2024-06-05 09:45:37
-LastSessions<|||>1<|||>chat
-LastActiveSession<|||>1<|||>chat
-SessionManager_WindowLeft<|||>3<|||>455
-SessionManager_WindowTop<|||>3<|||>139
-ColWidths_connform.ListSessions<|||>1<|||>163,50,50,50,50,50,10
-ColsVisible_connform.ListSessions<|||>1<|||>0,1,4,6
-ColPositions_connform.ListSessions<|||>1<|||>0,1,2,3,4,5,6
-ColSort_connform.ListSessions<|||>1<|||>0,0
-ColWidths_frmTableEditor.listColumns<|||>1<|||>42,100,152,90,60,114,50,117,130,139,100,100
-ColsVisible_frmTableEditor.listColumns<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11
-ColPositions_frmTableEditor.listColumns<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11
-ColSort_frmTableEditor.listColumns<|||>1<|||>-1,0
-ColWidths_frmTableEditor.treeIndexes<|||>1<|||>191,100,80,120
-ColsVisible_frmTableEditor.treeIndexes<|||>1<|||>0,1,2,3
-ColPositions_frmTableEditor.treeIndexes<|||>1<|||>0,1,2,3
-ColSort_frmTableEditor.treeIndexes<|||>1<|||>-1,0
-ColWidths_frmTableEditor.listForeignKeys<|||>1<|||>76,80,100,80,80,80
-ColsVisible_frmTableEditor.listForeignKeys<|||>1<|||>0,1,2,3,4,5
-ColPositions_frmTableEditor.listForeignKeys<|||>1<|||>0,1,2,3,4,5
-ColSort_frmTableEditor.listForeignKeys<|||>1<|||>-1,0
-ColWidths_frmTableEditor.listCheckConstraints<|||>1<|||>200,296
-ColsVisible_frmTableEditor.listCheckConstraints<|||>1<|||>0,1
-ColPositions_frmTableEditor.listCheckConstraints<|||>1<|||>0,1
-ColSort_frmTableEditor.listCheckConstraints<|||>1<|||>-1,0
-MainWinOnMonitor<|||>3<|||>0
-ColWidths_MainForm.ListDatabases<|||>1<|||>150,80,50,50,50,50,50,50,50,50,120
-ColsVisible_MainForm.ListDatabases<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10
-ColPositions_MainForm.ListDatabases<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10
-ColSort_MainForm.ListDatabases<|||>1<|||>0,0
-ColWidths_MainForm.ListVariables<|||>1<|||>160,200,428
-ColsVisible_MainForm.ListVariables<|||>1<|||>0,1,2
-ColPositions_MainForm.ListVariables<|||>1<|||>0,1,2
-ColSort_MainForm.ListVariables<|||>1<|||>0,0
-ColWidths_MainForm.ListStatus<|||>1<|||>160,428,100,100
-ColsVisible_MainForm.ListStatus<|||>1<|||>0,1,2,3
-ColPositions_MainForm.ListStatus<|||>1<|||>0,1,2,3
-ColSort_MainForm.ListStatus<|||>1<|||>0,0
-ColWidths_MainForm.ListProcesses<|||>1<|||>70,80,80,80,80,50,50,300
-ColsVisible_MainForm.ListProcesses<|||>1<|||>0,1,2,3,4,5,6,7
-ColPositions_MainForm.ListProcesses<|||>1<|||>0,1,2,3,4,5,6,7
-ColSort_MainForm.ListProcesses<|||>1<|||>0,1
-ColWidths_MainForm.ListCommandStats<|||>1<|||>120,100,100,100,368
-ColsVisible_MainForm.ListCommandStats<|||>1<|||>0,1,2,3,4
-ColPositions_MainForm.ListCommandStats<|||>1<|||>0,1,2,3,4
-ColSort_MainForm.ListCommandStats<|||>1<|||>1,1
-ColWidths_MainForm.ListTables<|||>1<|||>120,70,70,120,120,70,100,50,70,70,70,70,70,90,120,70,70,70,50
-ColsVisible_MainForm.ListTables<|||>1<|||>0,1,2,3,4,5,6,18
-ColPositions_MainForm.ListTables<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18
-ColSort_MainForm.ListTables<|||>1<|||>0,0
-dbtreewidth<|||>3<|||>479
-MainWinMaximized<|||>3<|||>1
-querymemoheight<|||>3<|||>100
-TabCloseOnDoubleClick<|||>3<|||>0
-CreateDbCollation<|||>1<|||>armscii8_bin
-MainWinWidth<|||>3<|||>781
-MainWinHeight<|||>3<|||>822
-DataFontSize<|||>3<|||>9
-MainWinLeft<|||>3<|||>681
-MainWinTop<|||>3<|||>0
-ExportSQL_Filenames<|||>1<|||>C:\Users\asus\OneDrive\Tài liệu\HeidiSQL\Snippets\browser_account.sql<{{{><}}}>browser_account<{{{><}}}>sinhvien<{{{><}}}>
-FilterPanel<|||>3<|||>0
-sqloutheight<|||>3<|||>308
-ExportSQL_CreateDatabases<|||>3<|||>1
-ExportSQL_CreateTables<|||>3<|||>1
-ExportSQL_DataHow<|||>3<|||>2
-SQLFile0<|||>1<|||>C:\Users\asus\AppData\Roaming\HeidiSQL\Backups\query-tab-2024-01-15_11-00-37-741.sql
-SQLFile1<|||>1<|||>C:\Users\asus\Downloads\New folder\db.sql
-SQLFile2<|||>1<|||>C:\Users\asus\Downloads\hung_asm\sql\sql_quanlysanpham.sql
-SQLFile3<|||>1<|||>C:\Users\asus\AppData\Roaming\HeidiSQL\Backups\query-tab-2024-06-03_01-34-32-145.sql
-SQLFile4<|||>1<|||>C:\Users\asus\Downloads\New folder\fileSQL.sql
-SQLFile5<|||>1<|||>C:\Users\asus\AppData\Roaming\HeidiSQL\Backups\query-tab-2024-01-18_20-29-16-552.sql
-SQLFile6<|||>1<|||>C:\Users\asus\AppData\Roaming\HeidiSQL\Backups\query-tab-2024-01-18_17-35-52-362.sql
-SQLFile7<|||>1<|||>C:\Users\asus\Downloads\loginmusic-1.sql
-SQLFile8<|||>1<|||>C:\Users\asus\Downloads\hung_asm\hung_asm\sql\sql_quanlysanpham.sql
-Servers\browser_account\SessionCreated<|||>1<|||>2024-05-06 08:19:38
-Servers\browser_account\Host<|||>1<|||>127.0.0.1
-Servers\browser_account\WindowsAuth<|||>3<|||>0
-Servers\browser_account\CleartextPluginEnabled<|||>3<|||>0
-Servers\browser_account\User<|||>1<|||>root
-Servers\browser_account\Password<|||>1<|||>2
-Servers\browser_account\LoginPrompt<|||>3<|||>0
-Servers\browser_account\Port<|||>1<|||>3306
-Servers\browser_account\NetType<|||>3<|||>0
-Servers\browser_account\Compressed<|||>3<|||>0
-Servers\browser_account\LocalTimeZone<|||>3<|||>0
-Servers\browser_account\QueryTimeout<|||>3<|||>30
-Servers\browser_account\KeepAlive<|||>3<|||>20
-Servers\browser_account\FullTableStatus<|||>3<|||>1
-Servers\browser_account\Databases<|||>1<|||>
-Servers\browser_account\Library<|||>1<|||>libmariadb.dll
-Servers\browser_account\Comment<|||>1<|||>
-Servers\browser_account\StartupScriptFilename<|||>1<|||>
-Servers\browser_account\TreeBackground<|||>3<|||>536870911
-Servers\browser_account\SSHtunnelActive<|||>3<|||>0
-Servers\browser_account\SshExecutable<|||>1<|||>
-Servers\browser_account\SSHtunnelHost<|||>1<|||>
-Servers\browser_account\SSHtunnelHostPort<|||>3<|||>22
-Servers\browser_account\SSHtunnelUser<|||>1<|||>
-Servers\browser_account\SSHtunnelPassword<|||>1<|||>9
-Servers\browser_account\SSHtunnelTimeout<|||>3<|||>4
-Servers\browser_account\SSHtunnelPrivateKey<|||>1<|||>
-Servers\browser_account\SSHtunnelPort<|||>3<|||>3307
-Servers\browser_account\SSL_Active<|||>3<|||>0
-Servers\browser_account\SSL_Key<|||>1<|||>
-Servers\browser_account\SSL_Cert<|||>1<|||>
-Servers\browser_account\SSL_CA<|||>1<|||>
-Servers\browser_account\SSL_Cipher<|||>1<|||>
-Servers\browser_account\IgnoreDatabasePattern<|||>1<|||>
-Servers\browser_account\LogFileDdl<|||>3<|||>0
-Servers\browser_account\LogFileDml<|||>3<|||>0
-Servers\browser_account\LogFilePath<|||>1<|||>C:\Users\asus\AppData\Roaming\HeidiSQL\Logs\%session\%db\%y%m%d.sql
-Servers\browser_account\RefusedCount<|||>3<|||>25
-Servers\browser_account\ServerVersionFull<|||>1<|||>10.4.32-MariaDB - mariadb.org binary distribution
-Servers\browser_account\ConnectCount<|||>3<|||>25
-Servers\browser_account\ServerVersion<|||>3<|||>100432
-Servers\browser_account\LastConnect<|||>1<|||>2024-06-15 07:55:33
-Servers\browser_account\lastUsedDB<|||>1<|||>browser_account
-Servers\browser_account\chat_application|user\Sort<|||>1<|||>0_UserName|1_Password|
-Servers\browser_account\QueryHistory\1<|||>1<|||>2024-05-18 20:54:02|browser_account|156|CREATE DATABASE IF NOT EXISTS browser_account;<{{{><}}}><{{{><}}}>USE browser_account;<{{{><}}}><{{{><}}}>DROP TABLE IF EXISTS history;<{{{><}}}><{{{><}}}>CREATE TABLE history (<{{{><}}}>    id INT AUTO_INCREMENT PRIMARY KEY,<{{{><}}}>    url VARCHAR(2048) NOT NULL,<{{{><}}}>    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP<{{{><}}}>);
-Servers\browser_account\QueryHistory\2<|||>1<|||>2024-05-20 15:13:21|browser_account|31|CREATE TABLE favourites (<{{{><}}}>    id INT AUTO_INCREMENT PRIMARY KEY,<{{{><}}}>    url VARCHAR(2048) NOT NULL,<{{{><}}}>    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP<{{{><}}}>);<{{{><}}}>
-Servers\chat\SessionCreated<|||>1<|||>2023-12-20 16:23:23
-Servers\chat\Host<|||>1<|||>127.0.0.1
-Servers\chat\WindowsAuth<|||>3<|||>0
-Servers\chat\CleartextPluginEnabled<|||>3<|||>0
-Servers\chat\User<|||>1<|||>root
-Servers\chat\Password<|||>1<|||>8
-Servers\chat\LoginPrompt<|||>3<|||>0
-Servers\chat\Port<|||>1<|||>3306
-Servers\chat\NetType<|||>3<|||>0
-Servers\chat\Compressed<|||>3<|||>0
-Servers\chat\LocalTimeZone<|||>3<|||>0
-Servers\chat\QueryTimeout<|||>3<|||>30
-Servers\chat\KeepAlive<|||>3<|||>20
-Servers\chat\FullTableStatus<|||>3<|||>1
-Servers\chat\Databases<|||>1<|||>
-Servers\chat\Library<|||>1<|||>libmariadb.dll
-Servers\chat\Comment<|||>1<|||>
-Servers\chat\StartupScriptFilename<|||>1<|||>
-Servers\chat\TreeBackground<|||>3<|||>536870911
-Servers\chat\SSHtunnelActive<|||>3<|||>0
-Servers\chat\SshExecutable<|||>1<|||>
-Servers\chat\SSHtunnelHost<|||>1<|||>
-Servers\chat\SSHtunnelHostPort<|||>3<|||>22
-Servers\chat\SSHtunnelUser<|||>1<|||>
-Servers\chat\SSHtunnelPassword<|||>1<|||>2
-Servers\chat\SSHtunnelTimeout<|||>3<|||>4
-Servers\chat\SSHtunnelPrivateKey<|||>1<|||>
-Servers\chat\SSHtunnelPort<|||>3<|||>3307
-Servers\chat\SSL_Active<|||>3<|||>0
-Servers\chat\SSL_Key<|||>1<|||>
-Servers\chat\SSL_Cert<|||>1<|||>
-Servers\chat\SSL_CA<|||>1<|||>
-Servers\chat\SSL_Cipher<|||>1<|||>
-Servers\chat\IgnoreDatabasePattern<|||>1<|||>
-Servers\chat\LogFileDdl<|||>3<|||>0
-Servers\chat\LogFileDml<|||>3<|||>0
-Servers\chat\LogFilePath<|||>1<|||>C:\Users\asus\AppData\Roaming\HeidiSQL\Logs\%session\%db\%y%m%d.sql
-Servers\chat\RefusedCount<|||>3<|||>6
-Servers\chat\ServerVersionFull<|||>1<|||>10.4.32-MariaDB - mariadb.org binary distribution
-Servers\chat\ConnectCount<|||>3<|||>37
-Servers\chat\ServerVersion<|||>3<|||>100432
-Servers\chat\LastConnect<|||>1<|||>2024-06-18 19:47:20
-Servers\chat\lastUsedDB<|||>1<|||>database
-Servers\chat\chat_application|user\Sort<|||>1<|||>0_UserID|
-Servers\musicJava\SessionCreated<|||>1<|||>2024-06-07 15:05:58
-Servers\musicJava\Host<|||>1<|||>127.0.0.1
-Servers\musicJava\WindowsAuth<|||>3<|||>0
-Servers\musicJava\CleartextPluginEnabled<|||>3<|||>0
-Servers\musicJava\User<|||>1<|||>root
-Servers\musicJava\Password<|||>1<|||>4
-Servers\musicJava\LoginPrompt<|||>3<|||>0
-Servers\musicJava\Port<|||>1<|||>3306
-Servers\musicJava\NetType<|||>3<|||>0
-Servers\musicJava\Compressed<|||>3<|||>0
-Servers\musicJava\LocalTimeZone<|||>3<|||>0
-Servers\musicJava\QueryTimeout<|||>3<|||>30
-Servers\musicJava\KeepAlive<|||>3<|||>20
-Servers\musicJava\FullTableStatus<|||>3<|||>1
-Servers\musicJava\Databases<|||>1<|||>
-Servers\musicJava\Library<|||>1<|||>libmariadb.dll
-Servers\musicJava\Comment<|||>1<|||>
-Servers\musicJava\StartupScriptFilename<|||>1<|||>
-Servers\musicJava\TreeBackground<|||>3<|||>536870911
-Servers\musicJava\SSHtunnelActive<|||>3<|||>0
-Servers\musicJava\SshExecutable<|||>1<|||>
-Servers\musicJava\SSHtunnelHost<|||>1<|||>
-Servers\musicJava\SSHtunnelHostPort<|||>3<|||>22
-Servers\musicJava\SSHtunnelUser<|||>1<|||>
-Servers\musicJava\SSHtunnelPassword<|||>1<|||>9
-Servers\musicJava\SSHtunnelTimeout<|||>3<|||>4
-Servers\musicJava\SSHtunnelPrivateKey<|||>1<|||>
-Servers\musicJava\SSHtunnelPort<|||>3<|||>3307
-Servers\musicJava\SSL_Active<|||>3<|||>0
-Servers\musicJava\SSL_Key<|||>1<|||>
-Servers\musicJava\SSL_Cert<|||>1<|||>
-Servers\musicJava\SSL_CA<|||>1<|||>
-Servers\musicJava\SSL_Cipher<|||>1<|||>
-Servers\musicJava\IgnoreDatabasePattern<|||>1<|||>
-Servers\musicJava\LogFileDdl<|||>3<|||>0
-Servers\musicJava\LogFileDml<|||>3<|||>0
-Servers\musicJava\LogFilePath<|||>1<|||>C:\Users\asus\AppData\Roaming\HeidiSQL\Logs\%session\%db\%y%m%d.sql
-Servers\musicJava\ServerVersionFull<|||>1<|||>10.4.32-MariaDB - mariadb.org binary distribution
-Servers\musicJava\ConnectCount<|||>3<|||>1
-Servers\musicJava\ServerVersion<|||>3<|||>100432
-Servers\musicJava\LastConnect<|||>1<|||>2024-06-09 13:18:55
-Servers\musicJava\lastUsedDB<|||>1<|||>chat_application
-Servers\projectjava\SessionCreated<|||>1<|||>2024-05-09 06:35:09
-Servers\projectjava\Host<|||>1<|||>127.0.0.1
-Servers\projectjava\WindowsAuth<|||>3<|||>0
-Servers\projectjava\CleartextPluginEnabled<|||>3<|||>0
-Servers\projectjava\User<|||>1<|||>root
-Servers\projectjava\Password<|||>1<|||>9
-Servers\projectjava\LoginPrompt<|||>3<|||>0
-Servers\projectjava\Port<|||>1<|||>3306
-Servers\projectjava\NetType<|||>3<|||>0
-Servers\projectjava\Compressed<|||>3<|||>0
-Servers\projectjava\LocalTimeZone<|||>3<|||>0
-Servers\projectjava\QueryTimeout<|||>3<|||>30
-Servers\projectjava\KeepAlive<|||>3<|||>20
-Servers\projectjava\FullTableStatus<|||>3<|||>1
-Servers\projectjava\Databases<|||>1<|||>
-Servers\projectjava\Library<|||>1<|||>libmariadb.dll
-Servers\projectjava\Comment<|||>1<|||>
-Servers\projectjava\StartupScriptFilename<|||>1<|||>
-Servers\projectjava\TreeBackground<|||>3<|||>536870911
-Servers\projectjava\SSHtunnelActive<|||>3<|||>0
-Servers\projectjava\SshExecutable<|||>1<|||>
-Servers\projectjava\SSHtunnelHost<|||>1<|||>
-Servers\projectjava\SSHtunnelHostPort<|||>3<|||>22
-Servers\projectjava\SSHtunnelUser<|||>1<|||>
-Servers\projectjava\SSHtunnelPassword<|||>1<|||>3
-Servers\projectjava\SSHtunnelTimeout<|||>3<|||>4
-Servers\projectjava\SSHtunnelPrivateKey<|||>1<|||>
-Servers\projectjava\SSHtunnelPort<|||>3<|||>3307
-Servers\projectjava\SSL_Active<|||>3<|||>0
-Servers\projectjava\SSL_Key<|||>1<|||>
-Servers\projectjava\SSL_Cert<|||>1<|||>
-Servers\projectjava\SSL_CA<|||>1<|||>
-Servers\projectjava\SSL_Cipher<|||>1<|||>
-Servers\projectjava\IgnoreDatabasePattern<|||>1<|||>
-Servers\projectjava\LogFileDdl<|||>3<|||>0
-Servers\projectjava\LogFileDml<|||>3<|||>0
-Servers\projectjava\LogFilePath<|||>1<|||>C:\Users\asus\AppData\Roaming\HeidiSQL\Logs\%session\%db\%y%m%d.sql
-Servers\projectjava\ServerVersionFull<|||>1<|||>10.4.32-MariaDB - mariadb.org binary distribution
-Servers\projectjava\ConnectCount<|||>3<|||>5
-Servers\projectjava\ServerVersion<|||>3<|||>100432
-Servers\projectjava\LastConnect<|||>1<|||>2024-06-02 10:01:48
-Servers\projectjava\lastUsedDB<|||>1<|||>browser_account
-Servers\projectjava\RefusedCount<|||>3<|||>5
-Servers\QuanLyKhachSan\SessionCreated<|||>1<|||>2024-05-30 14:37:33
-Servers\QuanLyKhachSan\Host<|||>1<|||>127.0.0.1
-Servers\QuanLyKhachSan\WindowsAuth<|||>3<|||>0
-Servers\QuanLyKhachSan\CleartextPluginEnabled<|||>3<|||>0
-Servers\QuanLyKhachSan\User<|||>1<|||>root
-Servers\QuanLyKhachSan\Password<|||>1<|||>1
-Servers\QuanLyKhachSan\LoginPrompt<|||>3<|||>0
-Servers\QuanLyKhachSan\Port<|||>1<|||>3306
-Servers\QuanLyKhachSan\NetType<|||>3<|||>0
-Servers\QuanLyKhachSan\Compressed<|||>3<|||>0
-Servers\QuanLyKhachSan\LocalTimeZone<|||>3<|||>0
-Servers\QuanLyKhachSan\QueryTimeout<|||>3<|||>30
-Servers\QuanLyKhachSan\KeepAlive<|||>3<|||>20
-Servers\QuanLyKhachSan\FullTableStatus<|||>3<|||>1
-Servers\QuanLyKhachSan\Databases<|||>1<|||>
-Servers\QuanLyKhachSan\Library<|||>1<|||>libmariadb.dll
-Servers\QuanLyKhachSan\Comment<|||>1<|||>
-Servers\QuanLyKhachSan\StartupScriptFilename<|||>1<|||>
-Servers\QuanLyKhachSan\TreeBackground<|||>3<|||>536870911
-Servers\QuanLyKhachSan\SSHtunnelActive<|||>3<|||>0
-Servers\QuanLyKhachSan\SshExecutable<|||>1<|||>
-Servers\QuanLyKhachSan\SSHtunnelHost<|||>1<|||>
-Servers\QuanLyKhachSan\SSHtunnelHostPort<|||>3<|||>22
-Servers\QuanLyKhachSan\SSHtunnelUser<|||>1<|||>
-Servers\QuanLyKhachSan\SSHtunnelPassword<|||>1<|||>2
-Servers\QuanLyKhachSan\SSHtunnelTimeout<|||>3<|||>4
-Servers\QuanLyKhachSan\SSHtunnelPrivateKey<|||>1<|||>
-Servers\QuanLyKhachSan\SSHtunnelPort<|||>3<|||>3307
-Servers\QuanLyKhachSan\SSL_Active<|||>3<|||>0
-Servers\QuanLyKhachSan\SSL_Key<|||>1<|||>
-Servers\QuanLyKhachSan\SSL_Cert<|||>1<|||>
-Servers\QuanLyKhachSan\SSL_CA<|||>1<|||>
-Servers\QuanLyKhachSan\SSL_Cipher<|||>1<|||>
-Servers\QuanLyKhachSan\IgnoreDatabasePattern<|||>1<|||>
-Servers\QuanLyKhachSan\LogFileDdl<|||>3<|||>0
-Servers\QuanLyKhachSan\LogFileDml<|||>3<|||>0
-Servers\QuanLyKhachSan\LogFilePath<|||>1<|||>C:\Users\asus\AppData\Roaming\HeidiSQL\Logs\%session\%db\%y%m%d.sql
-Servers\QuanLyKhachSan\ServerVersionFull<|||>1<|||>10.4.32-MariaDB - mariadb.org binary distribution
-Servers\QuanLyKhachSan\ConnectCount<|||>3<|||>3
-Servers\QuanLyKhachSan\ServerVersion<|||>3<|||>100432
-Servers\QuanLyKhachSan\LastConnect<|||>1<|||>2024-05-30 21:57:50
-Servers\QuanLyKhachSan\lastUsedDB<|||>1<|||>quanlykhachsan
-Servers\QuanLyKhachSan\RefusedCount<|||>3<|||>3
-Servers\sinhvien\SessionCreated<|||>1<|||>2024-05-06 10:29:03
-Servers\sinhvien\Host<|||>1<|||>127.0.0.1
-Servers\sinhvien\WindowsAuth<|||>3<|||>0
-Servers\sinhvien\CleartextPluginEnabled<|||>3<|||>0
-Servers\sinhvien\User<|||>1<|||>root
-Servers\sinhvien\Password<|||>1<|||>2
-Servers\sinhvien\LoginPrompt<|||>3<|||>0
-Servers\sinhvien\Port<|||>1<|||>3306
-Servers\sinhvien\NetType<|||>3<|||>0
-Servers\sinhvien\Compressed<|||>3<|||>0
-Servers\sinhvien\LocalTimeZone<|||>3<|||>0
-Servers\sinhvien\QueryTimeout<|||>3<|||>30
-Servers\sinhvien\KeepAlive<|||>3<|||>20
-Servers\sinhvien\FullTableStatus<|||>3<|||>1
-Servers\sinhvien\Databases<|||>1<|||>
-Servers\sinhvien\Library<|||>1<|||>libmariadb.dll
-Servers\sinhvien\Comment<|||>1<|||>
-Servers\sinhvien\StartupScriptFilename<|||>1<|||>
-Servers\sinhvien\TreeBackground<|||>3<|||>536870911
-Servers\sinhvien\SSHtunnelActive<|||>3<|||>0
-Servers\sinhvien\SshExecutable<|||>1<|||>
-Servers\sinhvien\SSHtunnelHost<|||>1<|||>
-Servers\sinhvien\SSHtunnelHostPort<|||>3<|||>22
-Servers\sinhvien\SSHtunnelUser<|||>1<|||>
-Servers\sinhvien\SSHtunnelPassword<|||>1<|||>2
-Servers\sinhvien\SSHtunnelTimeout<|||>3<|||>4
-Servers\sinhvien\SSHtunnelPrivateKey<|||>1<|||>
-Servers\sinhvien\SSHtunnelPort<|||>3<|||>3307
-Servers\sinhvien\SSL_Active<|||>3<|||>0
-Servers\sinhvien\SSL_Key<|||>1<|||>
-Servers\sinhvien\SSL_Cert<|||>1<|||>
-Servers\sinhvien\SSL_CA<|||>1<|||>
-Servers\sinhvien\SSL_Cipher<|||>1<|||>
-Servers\sinhvien\IgnoreDatabasePattern<|||>1<|||>
-Servers\sinhvien\LogFileDdl<|||>3<|||>0
-Servers\sinhvien\LogFileDml<|||>3<|||>0
-Servers\sinhvien\LogFilePath<|||>1<|||>C:\Users\asus\AppData\Roaming\HeidiSQL\Logs\%session\%db\%y%m%d.sql
-Servers\sinhvien\RefusedCount<|||>3<|||>8
-Servers\sinhvien\ServerVersionFull<|||>1<|||>10.4.32-MariaDB - mariadb.org binary distribution
-Servers\sinhvien\ConnectCount<|||>3<|||>13
-Servers\sinhvien\ServerVersion<|||>3<|||>100432
-Servers\sinhvien\LastConnect<|||>1<|||>2024-06-08 16:44:57
-Servers\sinhvien\lastUsedDB<|||>1<|||>hocsinh
-Servers\sinhvien\hocsinh|user\Sort<|||>1<|||>0_UserName|
-Servers\sinhvien\QueryHistory\1<|||>1<|||>2024-06-07 15:18:41|hocsinh|125|CREATE TABLE HocSinh (<{{{><}}}>    id INT AUTO_INCREMENT PRIMARY KEY,<{{{><}}}>    Ten VARCHAR(255),<{{{><}}}>    NgayThangNamSinh VARCHAR(20),<{{{><}}}>    Lop VARCHAR(10),<{{{><}}}>    GioiTinh VARCHAR(10),<{{{><}}}>    DiaChi VARCHAR(255),<{{{><}}}>    DiemTrungBinh DOUBLE<{{{><}}}>);<{{{><}}}><{{{><}}}>CREATE TABLE HocSinhCap1 (<{{{><}}}>    id INT AUTO_INCREMENT PRIMARY KEY,<{{{><}}}>    hocSinhId INT,<{{{><}}}>    MonNangKhieu VARCHAR(100),<{{{><}}}>    DiemNangKhieu DOUBLE,<{{{><}}}>    DiemToan DOUBLE,<{{{><}}}>    DiemTiengViet DOUBLE,<{{{><}}}>    FOREIGN KEY (hocSinhId) REFERENCES HocSinh(id)<{{{><}}}>);<{{{><}}}><{{{><}}}>CREATE TABLE HocSinhCap2 (<{{{><}}}>    id INT AUTO_INCREMENT PRIMARY KEY,<{{{><}}}>    hocSinhId INT,<{{{><}}}>    DiemToan DOUBLE,<{{{><}}}>    DiemVan DOUBLE,<{{{><}}}>    DiemHoa DOUBLE,<{{{><}}}>    DiemLy DOUBLE,<{{{><}}}>    FOREIGN KEY (hocSinhId) REFERENCES HocSinh(id)<{{{><}}}>);<{{{><}}}><{{{><}}}>CREATE TABLE HocSinhCap3 (<{{{><}}}>    id INT AUTO_INCREMENT PRIMARY KEY,<{{{><}}}>    hocSinhId INT,<{{{><}}}>    KhoiHoc VARCHAR(1),<{{{><}}}>    DiemToan DOUBLE,<{{{><}}}>    DiemVan DOUBLE,<{{{><}}}>    DiemHoa DOUBLE,<{{{><}}}>    DiemLy DOUBLE,<{{{><}}}>    FOREIGN KEY (hocSinhId) REFERENCES HocSinh(id)<{{{><}}}>);<{{{><}}}>
-Servers\sinhvien\QueryHistory\2<|||>1<|||>2024-06-07 16:38:34|hocsinh|78|CREATE TABLE hoc_sinh_cap1 (<{{{><}}}>    id INT AUTO_INCREMENT PRIMARY KEY,<{{{><}}}>    ten VARCHAR(100) NOT NULL,<{{{><}}}>    ngay_sinh DATE,<{{{><}}}>    lop VARCHAR(20),<{{{><}}}>    gioi_tinh VARCHAR(10),<{{{><}}}>    dia_chi VARCHAR(200),<{{{><}}}>    co_mon_nang_khieu BOOLEAN,<{{{><}}}>    diem_nang_khieu DOUBLE,<{{{><}}}>    diem_toan DOUBLE,<{{{><}}}>    diem_tieng_viet DOUBLE<{{{><}}}>);<{{{><}}}>CREATE TABLE hoc_sinh_cap2 (<{{{><}}}>    id INT AUTO_INCREMENT PRIMARY KEY,<{{{><}}}>    ten VARCHAR(100) NOT NULL,<{{{><}}}>    ngay_sinh DATE,<{{{><}}}>    lop VARCHAR(20),<{{{><}}}>    gioi_tinh VARCHAR(10),<{{{><}}}>    dia_chi VARCHAR(200),<{{{><}}}>    diem_toan DOUBLE,<{{{><}}}>    diem_van DOUBLE,<{{{><}}}>    diem_hoa DOUBLE,<{{{><}}}>    diem_ly DOUBLE<{{{><}}}>);<{{{><}}}>CREATE TABLE hoc_sinh_cap3 (<{{{><}}}>    id INT AUTO_INCREMENT PRIMARY KEY,<{{{><}}}>    ten VARCHAR(100) NOT NULL,<{{{><}}}>    ngay_sinh DATE,<{{{><}}}>    lop VARCHAR(20),<{{{><}}}>    gioi_tinh VARCHAR(10),<{{{><}}}>    dia_chi VARCHAR(200),<{{{><}}}>    khoi_hoc VARCHAR(1),<{{{><}}}>    diem_toan DOUBLE,<{{{><}}}>    diem_van DOUBLE,<{{{><}}}>    diem_hoa DOUBLE,<{{{><}}}>    diem_ly DOUBLE<{{{><}}}>);<{{{><}}}>
-Servers\sinhvien\QueryHistory\3<|||>1<|||>2024-06-08 16:44:24|hocsinh|16|DROP TABLE IF EXISTS `user`;<{{{><}}}>CREATE TABLE `user` (<{{{><}}}>  `UserID` int(10) unsigned NOT NULL AUTO_INCREMENT,<{{{><}}}>  `UserName` varchar(255) DEFAULT NULL,<{{{><}}}>  `Password` varchar(255) DEFAULT NULL,<{{{><}}}>  `Profile` longblob,<{{{><}}}>  PRIMARY KEY (`UserID`)<{{{><}}}>) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
-Servers\sinhvien\sinhvien|login\Sort<|||>1<|||>1_username|
-files
+-- --------------------------------------------------------
+-- Host:                         127.0.0.1
+-- Server version:               10.4.32-MariaDB - mariadb.org binary distribution
+-- Server OS:                    Win64
+-- HeidiSQL Version:             12.6.0.6765
+-- --------------------------------------------------------
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+
+-- Dumping database structure for database
+CREATE DATABASE IF NOT EXISTS `database` /*!40100 DEFAULT CHARACTER SET armscii8 COLLATE armscii8_bin */;
+USE `database`;
+
+-- Dumping structure for table database.files
+CREATE TABLE IF NOT EXISTS `files` (
+  `FileID` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `FileExtension` varchar(255) DEFAULT NULL,
+  `BlurHash` varchar(255) DEFAULT NULL,
+  `Status` char(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`FileID`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-- Dumping data for table database.files: ~6 rows (approximately)
+INSERT INTO `files` (`FileID`, `FileExtension`, `BlurHash`, `Status`) VALUES
+	(1, '.jpg', NULL, '0'),
+	(2, '.jpg', NULL, '0'),
+	(3, '.jpg', 'LJLg*4yst,eS=|WVtSaK%~#+IotR', '1'),
+	(4, '.jpg', 'LIGI=j?H4:9Z?wWV%2xu00M{sms;', '1'),
+	(5, '.jpg', 'LIGI=j?H4:9Z?wWV%2xu00M{sms;', '1'),
+	(6, '.jpg', 'LIGI=j?H4:9Z?wWV%2xu00M{sms;', '1');
+
+-- Dumping structure for table database.messages
+CREATE TABLE IF NOT EXISTS `messages` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `from_user_id` int(11) NOT NULL,
+  `to_user_id` int(11) NOT NULL,
+  `message` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `send_time` timestamp NOT NULL DEFAULT current_timestamp(),
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=armscii8 COLLATE=armscii8_bin;
+
+-- Dumping data for table database.messages: ~6 rows (approximately)
+INSERT INTO `messages` (`id`, `from_user_id`, `to_user_id`, `message`, `send_time`) VALUES
+	(1, 113, 114, 'chào', '2024-06-20 07:59:41'),
+	(2, 114, 113, 'đi học k?', '2024-06-20 08:00:19'),
+	(3, 113, 114, 'mấy giờ', '2024-06-20 08:11:05'),
+	(4, 114, 113, '8h', '2024-06-20 08:11:10'),
+	(5, 113, 114, 'L', '2024-06-20 08:57:52'),
+	(6, 114, 113, 'O', '2024-06-20 08:57:55');
+
+-- Dumping structure for table database.user
+CREATE TABLE IF NOT EXISTS `user` (
+  `UserID` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `UserName` varchar(255) NOT NULL,
+  `Password` varchar(255) NOT NULL,
+  PRIMARY KEY (`UserID`)
+) ENGINE=InnoDB AUTO_INCREMENT=115 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-- Dumping data for table database.user: ~10 rows (approximately)
+INSERT INTO `user` (`UserID`, `UserName`, `Password`) VALUES
+	(36, 'dara', '123'),
+	(104, 'Lee Thắm', 'tham123'),
+	(105, 'Minh Duy', 'duy123'),
+	(107, 'Hạ Vy', '123'),
+	(108, 'Thảo Vy', '123456789'),
+	(109, 'Khả Ni', '123456789@@'),
+	(110, 'Đặng Nhung', '15e2b0d3c33891ebb0f1ef609ec419420c20e320ce94c65fbc8c3312448eb225'),
+	(111, 'Khang', 'fae1657b9bf9a22e091ad18307b8a3f172abc20aa99a7a5f58699561c49dd5f1'),
+	(113, 'Hân', 'a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3'),
+	(114, 'Ngọc', 'ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad');
+
+-- Dumping structure for table database.user_account
+CREATE TABLE IF NOT EXISTS `user_account` (
+  `UserID` int(10) unsigned NOT NULL,
+  `UserName` varchar(255) DEFAULT NULL,
+  `Gender` char(1) NOT NULL DEFAULT '',
+  `Image` longblob DEFAULT NULL,
+  `ImageString` varchar(255) DEFAULT '',
+  `Status` char(1) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`UserID`),
+  CONSTRAINT `user_account_ibfk_1` FOREIGN KEY (`UserID`) REFERENCES `user` (`UserID`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-- Dumping data for table database.user_account: ~9 rows (approximately)
+INSERT INTO `user_account` (`UserID`, `UserName`, `Gender`, `Image`, `ImageString`, `Status`) VALUES
+	(36, 'dara', '', _binary 0x6c6f61645f66696c652827433a2f2f55736572732f2f617375732f2f4f6e6544726976652f2f5461cc69206c69eaf2752f2f4e65744265616e7350726f6a656374732f2f43756f694b694a6176612f2f54657374436861742f2f50726f6a6563744a6176612f2f636b2f2f7372632f2f69636f6e2f2f75736572322e706e672729, '', '1'),
+	(104, 'Thắm', '', NULL, '', '1'),
+	(105, 'Duy', '', NULL, '', '1'),
+	(107, 'Vy', '', NULL, '', '1'),
+	(108, 'Thảo Vy', '', NULL, '', '1'),
+	(109, 'Khả Ni', '', NULL, '', '1'),
+	(110, 'Đặng Nhung', '', NULL, '', '1'),
+	(111, 'Khang', '', NULL, '', '1'),
+	(113, 'Hân', '', _binary 0x6c6f61645f66696c652827433a2f2f55736572732f2f617375732f2f4f6e6544726976652f2f5461cc69206c69eaf2752f2f4e65744265616e7350726f6a656374732f2f43756f694b694a6176612f2f54657374436861742f2f50726f6a6563744a6176612f2f636b2f2f7372632f2f69636f6e2f2f75736572322e706e672729, '', '1'),
+	(114, 'Ngọc', '', _binary 0x6c6f61645f66696c652827433a2f2f55736572732f2f617375732f2f4f6e6544726976652f2f5461cc69206c69eaf2752f2f4e65744265616e7350726f6a656374732f2f43756f694b694a6176612f2f54657374436861742f2f50726f6a6563744a6176612f2f636b2f2f7372632f2f69636f6e2f2f75736572322e706e672729, '', '1');
+
+/*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40111 SET SQL_NOTES=IFNULL(@OLD_SQL_NOTES, 1) */;

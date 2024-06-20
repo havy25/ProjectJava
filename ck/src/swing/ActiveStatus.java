@@ -29,8 +29,14 @@ public class ActiveStatus extends Component {
         if (active) {
             Graphics2D g2 = (Graphics2D) grphcs;
             g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-            g2.setColor(new Color(62, 165, 49));
+            g2.setColor(new Color(62, 165, 49)); // Màu xanh lá cây
+            g2.fillOval(0, (getHeight() / 2) - 4, 8, 8);
+        } else {
+            Graphics2D g2 = (Graphics2D) grphcs;
+            g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+            g2.setColor(new Color(255, 0, 0)); // Màu đỏ
             g2.fillOval(0, (getHeight() / 2) - 4, 8, 8);
         }
+    
     }
 }

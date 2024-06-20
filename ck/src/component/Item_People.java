@@ -20,10 +20,19 @@ public class Item_People extends javax.swing.JPanel {
         lb.setText(user.getUserName());
         activeStatus.setActive(user.isStatus());
         init();
+        updateStatus(); // Thêm dòng này để cập nhật trạng thái online
     }
 
     public void updateStatus() {
-        activeStatus.setActive(user.isStatus());
+       if (user.isStatus()) {
+        lbStatus.setText("Online");
+        lbStatus.setForeground(new Color(62, 165, 49)); // Màu xanh lá cây
+        activeStatus.setActive(true);
+    } else {
+        lbStatus.setText("Offline");
+        lbStatus.setForeground(new Color(255, 0, 0)); // Màu đỏ
+        activeStatus.setActive(false);
+    }
     }
 
     private void init() {
@@ -64,9 +73,9 @@ public class Item_People extends javax.swing.JPanel {
         lb.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         lb.setText("Name");
 
-        lbStatus.setFont(new java.awt.Font("sansserif", 2, 12)); // NOI18N
+        lbStatus.setFont(new java.awt.Font("Ebrima", 0, 14)); // NOI18N
         lbStatus.setForeground(new java.awt.Color(117, 117, 117));
-        lbStatus.setText("New User");
+        lbStatus.setText("Offline");
 
         activeStatus.setActive(true);
 
@@ -78,11 +87,11 @@ public class Item_People extends javax.swing.JPanel {
                 .addComponent(imageAvatar1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lb, javax.swing.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
+                    .addComponent(lb, javax.swing.GroupLayout.DEFAULT_SIZE, 169, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(lbStatus)
-                        .addGap(3, 3, 3)
                         .addComponent(activeStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(2, 2, 2)
+                        .addComponent(lbStatus)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );

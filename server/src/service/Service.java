@@ -36,6 +36,7 @@ public class Service {
     private JTextArea textArea;
     private final int PORT_NUMBER = 9999;
      private boolean isServerRunning;
+     private ServiceMessage serviceMessage;
     
     public static Service getInstance(JTextArea textArea) {
         if (instance == null) {
@@ -49,6 +50,7 @@ public class Service {
         serviceUser = new ServiceUser();
         serviceFile = new ServiceFIle();
         listClient = new ArrayList<>();
+        serviceMessage = new ServiceMessage();
     }
     
     public void startServer() {
@@ -58,7 +60,7 @@ public class Service {
         server.addConnectListener(new ConnectListener() {
             @Override
             public void onConnect(SocketIOClient sioc) {
-                textArea.append("One client connected\n");
+                textArea.append("Một client đã kết nối\n");
             }
         });
         server.addEventListener("register", Model_Register.class, new DataListener<Model_Register>() {
@@ -67,7 +69,7 @@ public class Service {
                 Model_Message message = serviceUser.register(t);
                 ar.sendAckData(message.isAction(), message.getMessage(), message.getData());
                 if (message.isAction()) {
-                    textArea.append("User has Register :" + t.getUserName() + " Pass :" + t.getPassword() + "\n");
+                    textArea.append("Người dùng đăng kí tên :" + t.getUserName() + " Pass :" + t.getPassword() + "\n");
                     server.getBroadcastOperations().sendEvent("list_user", (Model_User_Account) message.getData());
                     addClient(sioc, (Model_User_Account) message.getData());
                 }
@@ -156,13 +158,13 @@ public class Service {
         });
         server.start();
        isServerRunning = true;
-        textArea.append("Server has Start on port : " + PORT_NUMBER + "\n");
+        textArea.append("Server start cổng : " + PORT_NUMBER + "\n");
     }
     public void stopServer() {
      if (isServerRunning) {
             server.stop();
             isServerRunning = false;
-            textArea.append("Server has Stopped\n");
+            textArea.append("Server đã dừng\n");
         }
 }
     
@@ -179,22 +181,27 @@ public class Service {
     }
     
     private void sendToClient(Model_Send_Message data, AckRequest ar) {
-        if (data.getMessageType() == MessageType.IMAGE.getValue() || data.getMessageType() == MessageType.FILE.getValue()) {
-            try {
-                Model_File file = serviceFile.addFileReceiver(data.getText());
-                serviceFile.initFile(file, data);
-                ar.sendAckData(file.getFileID());
-            } catch (IOException | SQLException e) {
-                e.printStackTrace();
-            }
-        } else {
-            for (Model_Client c : listClient) {
-                if (c.getUser().getUserID() == data.getToUserID()) {
-                    c.getClient().sendEvent("receive_ms", new Model_Receive_Message(data.getMessageType(), data.getFromUserID(), data.getText(), null));
-                    break;
-                }
+          if (data.getMessageType() == MessageType.IMAGE.getValue() || data.getMessageType() == MessageType.FILE.getValue()) {
+        try {
+            Model_File file = serviceFile.addFileReceiver(data.getText());
+            serviceFile.initFile(file, data);
+            ar.sendAckData(file.getFileID());
+        } catch (IOException | SQLException e) {
+            e.printStackTrace();
+        }
+    } else {
+        try {
+            serviceMessage.saveMessage(data);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        for (Model_Client c : listClient) {
+            if (c.getUser().getUserID() == data.getToUserID()) {
+                c.getClient().sendEvent("receive_ms", new Model_Receive_Message(data.getMessageType(), data.getFromUserID(), data.getText(), null));
+                break;
             }
         }
+    }
     }
     
     private void sendTempFileToClient(Model_Send_Message data, Model_Receive_Image dataImage) {
@@ -215,6 +222,7 @@ public class Service {
         }
         return 0;
     }
+    
     
     public List<Model_Client> getListClient() {
         return listClient;

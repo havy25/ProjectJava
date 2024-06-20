@@ -20,6 +20,7 @@ public class ServiceUser {
     public ServiceUser() {
         this.con = DatabaseConnection.getInstance().getConnection();
     }
+    
 
     public Model_Message register(Model_Register data) {
         //  Check user exit
@@ -142,4 +143,20 @@ public class ServiceUser {
         return null;
     }
 }
+    public List<Model_User_Account> getUser() throws SQLException {
+    List<Model_User_Account> list = new ArrayList<>();
+    PreparedStatement p = con.prepareStatement(SELECT_USER_ACCOUNT);
+    ResultSet r = p.executeQuery();
+    while (r.next()) {
+        int userID = r.getInt(1);
+        String userName = r.getString(2);
+        String gender = r.getString(3);
+        String image = r.getString(4);
+        list.add(new Model_User_Account(userID, userName, gender, image, checkUserStatus(userID)));
+    }
+    r.close();
+    p.close();
+    return list;
+}
+
 }

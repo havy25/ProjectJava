@@ -20,11 +20,11 @@
               <Component id="imageAvatar1" min="-2" pref="44" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="lb" pref="144" max="32767" attributes="0"/>
+                  <Component id="lb" pref="169" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
-                      <Component id="lbStatus" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
                       <Component id="activeStatus" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                      <Component id="lbStatus" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -57,7 +57,7 @@
       <Properties>
         <Property name="borderSize" type="int" value="0"/>
         <Property name="image" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/com/raven/icon/user.png"/>
+          <Image iconType="3" name="/icon/user.png"/>
         </Property>
       </Properties>
 
@@ -76,12 +76,12 @@
     <Component class="javax.swing.JLabel" name="lbStatus">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="sansserif" size="12" style="2"/>
+          <Font name="Ebrima" size="14" style="0"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="75" green="75" red="75" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="New User"/>
+        <Property name="text" type="java.lang.String" value="Offline"/>
       </Properties>
     </Component>
     <Component class="swing.ActiveStatus" name="activeStatus">

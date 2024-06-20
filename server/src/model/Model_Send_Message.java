@@ -2,6 +2,10 @@ package model;
 
 public class Model_Send_Message {
 
+    public Model_Send_Message(int fromUserID, int toUserID, String text, int messageType) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
     public int getMessageType() {
         return messageType;
     }
