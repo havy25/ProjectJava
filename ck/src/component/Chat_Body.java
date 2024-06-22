@@ -43,8 +43,8 @@ public class Chat_Body extends javax.swing.JPanel {
             item.setTime();
             body.add(item, "wrap, w 100::80%");
         }
-        repaint();
-        revalidate();
+        repaint(); //cập nhật hiển thị của một component,
+        revalidate(); //tính toán lại layout của giao diện. 
     }
 
     public void addItemLeft(String text, String user, String[] image) {
@@ -130,7 +130,7 @@ public class Chat_Body extends javax.swing.JPanel {
         sp.setBorder(null);
         sp.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
-        body.setBackground(new java.awt.Color(204, 204, 204));
+        body.setBackground(new java.awt.Color(179, 233, 255));
 
         javax.swing.GroupLayout bodyLayout = new javax.swing.GroupLayout(body);
         body.setLayout(bodyLayout);

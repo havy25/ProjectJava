@@ -25,6 +25,11 @@ public class ServiceUser {
     public Model_Message register(Model_Register data) {
         //  Check user exit
         Model_Message message = new Model_Message();
+        if (data.getUserName().equals("Enter Username") || data.getPassword().equals("Enter Password")) {
+            message.setAction(false);
+            message.setMessage("Vui lòng nhập đầy đủ tên đăng nhập và mật khẩu.");
+            return message;
+        }
         try {
             PreparedStatement p = con.prepareStatement(CHECK_USER);
             p.setString(1, data.getUserName());
@@ -64,7 +69,7 @@ public class ServiceUser {
             }
         } catch (SQLException e) {
             message.setAction(false);
-            message.setMessage("Server Error");
+            message.setMessage("Lỗi máy chủ: " + e.getMessage());
             try {
                 if (con.getAutoCommit() == false) {
                     con.rollback();
@@ -78,6 +83,10 @@ public class ServiceUser {
 
     public Model_User_Account login(Model_Login login) throws SQLException {
         Model_User_Account data = null;
+                // Kiểm tra các trường dữ liệu có đầy đủ hay không
+        if (login.getUserName().equals("Enter Username") || login.getPassword().equals("Enter Password")) {
+            throw new IllegalArgumentException("Vui lòng nhập đầy đủ tên đăng nhập và mật khẩu.");
+        }
         PreparedStatement p = con.prepareStatement(LOGIN);
         p.setString(1, login.getUserName());
         p.setString(2, hashPassword(login.getPassword())); // Mã hóa mật khẩu trước khi so sánh
@@ -88,6 +97,8 @@ public class ServiceUser {
             String gender = r.getString(3);
             String image = r.getString(4);
             data = new Model_User_Account(userID, userName, gender, image, true);
+        }else {
+            throw new SQLException("Sai tên đăng nhập hoặc mật khẩu.");
         }
         r.close();
         p.close();

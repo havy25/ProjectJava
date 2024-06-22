@@ -26,7 +26,7 @@ public class Service {
     private Model_User_Account user;
     private List<Model_File_Sender> fileSender;
     private List<Model_File_Receiver> fileReceiver;
-
+    
     public static Service getInstance() {
         if (instance == null) {
             instance = new Service();
@@ -125,14 +125,6 @@ public class Service {
     // Xóa thông tin người dùng
     Service.getInstance().setUser(null);
 
-//    // Xóa nội dung các ô nhập trong form login
-   // P_Login.clearFields();
-//
-//    // Hiển thị lại giao diện đăng nhập
-//    form.Home.setVisible(false);
-//    vIew_Image.setVisible(false);
-//    loading.setVisible(false);
-//    login.setVisible(true);
 }
 
 
@@ -150,5 +142,12 @@ public class Service {
 
     private void error(Exception e) {
         System.err.println(e);
+    }
+    // Phương thức lấy tên người dùng
+    public String getUsername() {
+        if (user != null) {
+            return user.getUserName();
+        }
+        return null; // Hoặc giá trị mặc định phù hợp nếu không có người dùng nào được đặt
     }
 }

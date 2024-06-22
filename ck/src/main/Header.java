@@ -1,14 +1,27 @@
 package main;
 
+import service.Service;
+
 public class Header extends javax.swing.JPanel {
 
     public Header() {
         initComponents();
+       updateUserNameFromService();
     }
 
       public void updateUserName(String userName) {
         jLabel1.setText(userName);
     }
+      // Phương thức để cập nhật tên người dùng từ Service
+    public void updateUserNameFromService() {
+        String userName = Service.getInstance().getUsername();
+        if (userName != null) {
+            jLabel1.setText(userName);
+        } else {
+            jLabel1.setText("Your Account"); // Hoặc giá trị mặc định phù hợp nếu userName là null
+        }
+    }
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {

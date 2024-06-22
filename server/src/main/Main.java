@@ -5,6 +5,7 @@ import connection.DatabaseConnection;
 import service.Service;
 import java.sql.SQLException;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 
 
@@ -18,7 +19,17 @@ public class Main extends javax.swing.JFrame {
      private void init() {
         setIconImage(new ImageIcon(getClass().getResource("/icon/logoServer.png")).getImage());
          setTitle("Start Server!");
+          StopServer.setEnabled(false);
+            StartServer.setEnabled(true);
+    // Đăng ký sự kiện WindowListener cho cửa sổ chính
+    this.addWindowListener(new java.awt.event.WindowAdapter() {
+        @Override
+        public void windowClosing(java.awt.event.WindowEvent windowEvent) {
+            confirmCloseWindow(); // Gọi phương thức xác nhận khi đóng cửa sổ
+        }
+    });
      }
+     private boolean serverRunning = false;
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -122,12 +133,7 @@ public class Main extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-//        try {
-//            DatabaseConnection.getInstance().connectToDatabase();
-//            Service.getInstance(txt).startServer();
-//        } catch (SQLException e) {
-//            txt.append("Error : " + e + "\n");
-//        }
+
     }//GEN-LAST:event_formWindowOpened
 
     private void StopServerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StopServerActionPerformed
@@ -143,20 +149,42 @@ public class Main extends javax.swing.JFrame {
           try {
             DatabaseConnection.getInstance().connectToDatabase();
             Service.getInstance(txt).startServer();
+            // Cập nhật trạng thái và giao diện người dùng
+        serverRunning = true;
+        StartServer.setEnabled(false);
+        StopServer.setEnabled(true);
         } catch (SQLException e) {
             txt.append("Error : " + e + "\n");
         }
     }//GEN-LAST:event_StartServerMouseClicked
-
-    private void StopServerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_StopServerMouseClicked
-        // TODO add your handling code here:
-          try {
+    // Phương thức để hiển thị hộp thoại xác nhận khi đóng cửa sổ
+private void confirmCloseWindow() {
+    int confirm = JOptionPane.showConfirmDialog(this, "Đóng máy chủ luôn nhé!", "Xác nhận", JOptionPane.YES_NO_OPTION);
+    if (confirm == JOptionPane.YES_OPTION) {
+        // Dừng máy chủ
+        try {
             Service.getInstance(txt).stopServer();
         } catch (Exception e) {
             txt.append("Error : " + e + "\n");
         }
+    } else {
+        // Người dùng chọn No hoặc đóng hộp thoại
+        // Không có hành động gì
+    }
+}
+    private void StopServerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_StopServerMouseClicked
+        // TODO add your handling code here:
+          try {
+            Service.getInstance(txt).stopServer();
+            // Cập nhật trạng thái và giao diện người dùng
+        serverRunning = false;
+        StopServer.setEnabled(false);
+        StartServer.setEnabled(true);
+        } catch (Exception e) {
+            txt.append("Error : " + e + "\n");
+        }
     }//GEN-LAST:event_StopServerMouseClicked
-
+    
     /**
      * @param args the command line arguments
      */
@@ -179,7 +207,7 @@ public class Main extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {

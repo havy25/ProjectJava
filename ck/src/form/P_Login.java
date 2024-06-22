@@ -2,6 +2,7 @@ package form;
 
 import event.PublicEvent;
 import java.awt.Color;
+import javax.swing.JOptionPane;
 import model.Model_Login;
 import main.Header;
 
@@ -30,6 +31,9 @@ public class P_Login extends javax.swing.JPanel {
             header.updateUserName(userName);
         }
     }
+    private void showErrorMessage(String message) {
+        JOptionPane.showMessageDialog(this, message, "Lỗi", JOptionPane.ERROR_MESSAGE);
+}
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -157,7 +161,19 @@ public class P_Login extends javax.swing.JPanel {
     }//GEN-LAST:event_cmdRegisterActionPerformed
 
     private void cmdLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdLoginActionPerformed
-    PublicEvent.getInstance().getEventLogin().login(new Model_Login(txtUser.getText(), String.valueOf(txtPass.getPassword())));
+    String userName = txtUser.getText().trim();
+    String password = String.valueOf(txtPass.getPassword());
+    
+    if (userName.isEmpty() || userName.equals("Enter Username")) {
+        showErrorMessage("Vui lòng nhập tên người dùng");
+        txtUser.grabFocus();
+    } else if (password.isEmpty() || password.equals("Enter Password")) {
+        showErrorMessage("Vui lòng nhập mật khẩu");
+        txtPass.grabFocus();
+    } else {
+        Model_Login data = new Model_Login(userName, password);
+        PublicEvent.getInstance().getEventLogin().login(data);
+    }
  
     }//GEN-LAST:event_cmdLoginActionPerformed
 
@@ -177,7 +193,7 @@ public class P_Login extends javax.swing.JPanel {
         // TODO add your handling code here:
       if (txtUser.getText().equals("")) {
         txtUser.setText("Enter Username");
-        txtUser.setForeground(Color.BLACK); // Đặt màu chữ thành màu xám cho placeholder
+          txtUser.setForeground(new Color(153,153,153));// Đặt màu chữ thành màu xám cho placeholder
     } else {
         txtUser.setForeground(Color.BLACK); // Đảm bảo màu chữ là màu đen khi có nội dung
     }

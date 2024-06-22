@@ -3,38 +3,23 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/service/Service.java</file>
             <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/component/Chat_Right.java</file>
-            <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/component/Chat_Title.java</file>
-            <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/component/MenuButton.java</file>
-            <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/component/Panel_More.java</file>
-            <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/form/Report.java</file>
-            <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/component/Chat_Left.java</file>
-            <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/form/Loading.java</file>
-            <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/form/Home.java</file>
-            <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/form/Menu_Left.java</file>
-            <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/component/OptionButton.java</file>
-            <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/model/Model_User_Account.java</file>
-            <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/component/Chat_Date.java</file>
-            <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/component/Chat_Item.java</file>
-            <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/component/Chat_Bottom.java</file>
-            <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/main/ImageAvatar.java</file>
-            <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/swing/ImageAvatar.java</file>
-            <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/swing/ActiveStatus.java</file>
-            <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/form/VIew_Image.java</file>
+            <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/service/Service.java</file>
+            <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/component/Chat_File.java</file>
             <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/form/Menu_Right.java</file>
             <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/component/Chat_Body.java</file>
-            <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/form/Chat.java</file>
+            <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/component/Chat_Title.java</file>
+            <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/form/P_Login.java</file>
+            <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/form/P_Register.java</file>
             <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/main/Main.java</file>
             <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/component/Chat_Left_With_Profile.java</file>
-            <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/model/Model_Login.java</file>
-            <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/component/Item_People.java</file>
-            <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/form/Login.java</file>
+            <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/component/Chat_Left.java</file>
             <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/component/Chat_Image.java</file>
-            <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/icon/message_selected.png</file>
-            <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/main/Header.java</file>
-            <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/icon/message.png</file>
-            <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/component/Image_Item.java</file>
+            <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/component/Chat_Date.java</file>
+            <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/swing/ComponentResizer.java</file>
+            <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/component/Chat_Item.java</file>
+            <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/event/PublicEvent.java</file>
+            <file>file:/C:/Users/asus/OneDrive/Tài%20liệu/NetBeansProjects/CuoiKiJava/TestChat/ProjectJava/ck/src/component/Chat_Bottom.java</file>
         </group>
     </open-files>
 </project-private>

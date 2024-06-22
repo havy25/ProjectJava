@@ -2,6 +2,7 @@ package component;
 
 import model.Model_User_Account;
 import java.awt.Color;
+import static java.awt.Color.*;
 
 public class Chat_Title extends javax.swing.JPanel {
 
@@ -10,7 +11,8 @@ public class Chat_Title extends javax.swing.JPanel {
     }
 
     private Model_User_Account user;
-
+    private Color green = new Color(0, 153, 0); // Màu xanh lá cây
+private Color red = new Color(255, 0, 0); // Màu đỏ
     public Chat_Title() {
         initComponents();
     }
@@ -21,8 +23,10 @@ public class Chat_Title extends javax.swing.JPanel {
         if (user.isStatus()) {
             statusActive();
             setStatusText("Online");
+            lbStatus.setForeground(green);
         } else {
             setStatusText("Offline");
+            lbStatus.setForeground(red);
         }
     }
 
