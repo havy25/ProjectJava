@@ -45,6 +45,7 @@ public class Service {
         return instance;
     }
     
+    
     private Service(JTextArea textArea) {
         this.textArea = textArea;
         serviceUser = new ServiceUser();
@@ -226,5 +227,14 @@ public class Service {
     
     public List<Model_Client> getListClient() {
         return listClient;
+    } 
+    public Model_Message changePassword(Model_User_Account user, String oldPassword, String newPassword) {
+    boolean isSuccess = serviceUser.changePassword(user, oldPassword, newPassword);
+    if (isSuccess) {
+        return new Model_Message(true, "Thay đổi mật khẩu thành công", null);
+    } else {
+        return new Model_Message(false, "Mật khẩu cũ không đúng", null);
     }
+}
+
 }

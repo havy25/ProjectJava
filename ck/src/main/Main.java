@@ -18,7 +18,6 @@ import menu.drawer.DrawerController;
 import menu.drawer.DrawerItem;
 import menu.drawer.EventDrawer;
 import form.Report;
-
 public class Main extends javax.swing.JFrame {
 
     public Main() {
@@ -55,6 +54,9 @@ public class Main extends javax.swing.JFrame {
                         }
                         if ("Report".equals(item.getText())) {
                             showReportWindow();
+                        }
+                         if ("Chat Box".equals(item.getText())) {
+                            showReportWindow2();
                         }
                     }
                 })
@@ -132,6 +134,10 @@ public class Main extends javax.swing.JFrame {
          private void showReportWindow() {
         Report reportWindow = new Report();
         reportWindow.setVisible(true);
+    }
+               private void showReportWindow2() {
+        PredictText reportWindow1 = new PredictText();
+        reportWindow1.setVisible(true);
     }
 
     @SuppressWarnings("unchecked")

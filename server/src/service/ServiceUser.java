@@ -21,6 +21,7 @@ public class ServiceUser {
         this.con = DatabaseConnection.getInstance().getConnection();
     }
     
+    
 
     public Model_Message register(Model_Register data) {
         //  Check user exit
@@ -169,5 +170,21 @@ public class ServiceUser {
     p.close();
     return list;
 }
+    public boolean changePassword(Model_User_Account user, String oldPassword, String newPassword) {
+    try {
+        Connection connection = DatabaseConnection.getInstance().getConnection();
+        String query = "UPDATE users SET password = ? WHERE userID = ? AND password = ?";
+        PreparedStatement statement = connection.prepareStatement(query);
+        statement.setString(1, newPassword);
+        statement.setInt(2, user.getUserID());
+        statement.setString(3, oldPassword);
+        int rowsAffected = statement.executeUpdate();
+        return rowsAffected > 0;
+    } catch (SQLException e) {
+        e.printStackTrace();
+        return false;
+    }
+}
+
 
 }
