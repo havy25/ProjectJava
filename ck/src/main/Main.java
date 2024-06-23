@@ -139,6 +139,12 @@ public class Main extends javax.swing.JFrame {
         PredictText reportWindow1 = new PredictText();
         reportWindow1.setVisible(true);
     }
+               private void closeChatBox() {
+    // Ẩn giao diện ChatBox
+    home.setVisible(false);
+    login.setVisible(true);
+}
+     
 
     @SuppressWarnings("unchecked")
 
@@ -311,6 +317,7 @@ public class Main extends javax.swing.JFrame {
 
     private void cmdCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdCloseActionPerformed
         System.exit(0);
+        
     }//GEN-LAST:event_cmdCloseActionPerformed
 
     private void cmdMinimizeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdMinimizeActionPerformed
